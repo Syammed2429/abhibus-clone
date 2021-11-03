@@ -7,7 +7,7 @@ input{
     margin: 0% ;
     height: 40px;
     margin-left: 20px;
-    color: darkgray;
+   
     border: none;
 }
 .floating-label-group {
@@ -27,7 +27,19 @@ input{
 		transition: all 0.1s ease;
         
 	}
-
+	.color{
+		color: #cccccc;
+	}
+	.floating-label2 {
+		font-size: 14px;
+		color: #cccccc;
+		position: absolute;
+		pointer-events: none;
+		top: -15px;
+		left: 15px;
+		transition: all 0.1s ease;
+       
+	}
 	input:focus ~ .floating-label,
 	input:not(:focus):valid ~ .floating-label {
 		top: -15px;
@@ -38,6 +50,10 @@ input{
 		color: darkslategrey;
         border: none;
 	}
+
+	
+	
+
 
 
 .row {
@@ -56,7 +72,7 @@ input{
 }
 .icon{
     height:30px;
-    width: 30px;
+    width: 20px;
     position: absolute;
 }
 
@@ -68,11 +84,5 @@ input{
     border-bottom-right-radius: 10px;
 }
 
-input[type="date"]::before { 
-	content: attr(data-placeholder);
-	width: 100%;
-}
 
-/* hide our custom/fake placeholder text when in focus to show the default
- * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
- */
+
