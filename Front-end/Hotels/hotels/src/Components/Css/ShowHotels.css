@@ -4,7 +4,8 @@
     width: 200px;
 }
 .suggestion-width{
-    width: 50%;
+    width: 100%;
     border:  1px solid lightslategray;
     justify-content: space-between;
 }
+

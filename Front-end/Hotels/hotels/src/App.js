@@ -9,7 +9,7 @@ function App() {
     <div className="App">
        <Link to="/"> <Hotel /></Link>
       
-       <Link to="/hotels"> <ShowHotel/></Link>
+       <Link to="/Showhotels"> <ShowHotel/></Link>
 
        <Switch>
         <Route path="/" >

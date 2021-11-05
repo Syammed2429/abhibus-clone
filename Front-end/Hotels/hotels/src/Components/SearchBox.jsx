@@ -3,7 +3,6 @@ import "../Components/Css/Search.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ShowHotel from "./ShowHotels";
-import  { Redirect } from 'react-router-dom'
 import { Switch,Route , Link } from "react-router-dom";
 
 function SearchBox(){
@@ -12,16 +11,16 @@ function SearchBox(){
     const [checkout,setCheckout]=useState(new Date());
     const [show,setShow]= useState(false)
     const [guest,setGuest] =useState("1 Adult 0 children")
-    
+
 
     const handlesubmit = (e)=>{
         console.log("city",city,checkin,checkout,guest)
        setShow(true);
-       window.location.href='/hotels'
+      // window.location.href='/Showhotels'
     }
     return (
+
         <div className="flex">
-        
             <div className="border border_start">
             <div className="floating-label-group">
                 <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdtkWGReHSyMejXT_WTXa2ipCUJj5DfqhVSIfY-_-sBXY9cqi-ducWorRKOpNBifTDM14&usqp=CAU" alt="icon"/>
@@ -35,17 +34,17 @@ function SearchBox(){
             <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmGZcO1ksv2HDnWZCe8dZcYA8MFNNGCeX6LEfGdXlJ50op3pMvKLedXuy9bc5S_r8oUg&usqp=CAU" alt="icon"/>
             <label className="floating-label2">Check In</label>
             <DatePicker className="color" selected={checkin} onChange={(date) => setCheckin(date)} />
-		
+
 			</div>
            </div>
 
            <div className="border">
             <div className="floating-label-group">
-           
+
             <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmGZcO1ksv2HDnWZCe8dZcYA8MFNNGCeX6LEfGdXlJ50op3pMvKLedXuy9bc5S_r8oUg&usqp=CAU" alt="icon"/>
             <label className="floating-label2">Check Out</label>
 			<DatePicker className="color" selected={checkout} onChange={(date) => setCheckout(date)} />
-            
+
 			</div>
            </div>
 
@@ -57,9 +56,9 @@ function SearchBox(){
 			</div>
            </div>
 
+          
+            <button className="button_search" onClick={handlesubmit}>Search</button> 
 
-            <button className="button_search" onClick={handlesubmit}>Search</button>
-         
         </div>
     )
 }
