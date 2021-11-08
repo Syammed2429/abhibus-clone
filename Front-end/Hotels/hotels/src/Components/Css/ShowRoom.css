@@ -1,0 +1,50 @@
+.flex{
+    display: flex;
+}
+.show{
+    width: 55%;
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.show>img{
+    height: 50%;
+    width: 100%;
+}
+.img{
+    height: 105%;
+    width: 47%;
+}
+.show+img+div{
+    justify-content: space-between;
+   margin: 2%;
+}
+.block{
+    display: block;
+    width: 100%;
+}
+
+.check{
+    border: 1px solid grey;
+   margin-top: 2%;
+}
+.short-box{
+    width: 400px;
+    border: 1px solid darkgray;
+    margin:  5%;
+    height: 200px;
+   text-align: left;
+}
+.text-decor{
+      font-weight:100 ;
+      color: red;
+      text-align: start;
+}
+.special-li{
+    list-style-type: disc;
+    text-align: start;
+}
+body{
+    font-size: 14px;
+}

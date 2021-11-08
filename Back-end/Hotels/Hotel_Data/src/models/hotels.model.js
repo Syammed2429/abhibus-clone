@@ -13,7 +13,8 @@ const hotelSchema=new mongoose.Schema({
   gallery:[{type:String,required:true}],
   thumbnail:{type:String,required:true},
   oak_price:{type:Number,required:true},
- maple_price:{type:Number,required:true}
+ maple_price:{type:Number,required:true},
+    description:{type:String,required:true}
 },{
     versionKey:false
 });

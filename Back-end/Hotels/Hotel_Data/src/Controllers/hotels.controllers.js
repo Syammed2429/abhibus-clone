@@ -36,11 +36,6 @@ router.get("/filter_wifi",async (req,res)=>{
     res.send(user_d);
 })
 
-// router.get("/filter_front_desk",async (req,res)=>{
-//     const user_d = await Hotels.find({front_desk:true}).sort({price:-1}).lean().exec();
-//     res.send(user_d);
-// })
-
 router.get("/filter_query",async (req,res)=>{
     let qu= req.query;
     console.log(qu)
@@ -48,21 +43,6 @@ router.get("/filter_query",async (req,res)=>{
     console.log(user_d)
     res.send(user_d);
 })
-
-// router.get("/filter_breakfast",async (req,res)=>{
-//     const user_d = await Hotels.find({breakfast:true}).sort({price:-1}).lean().exec();
-//     res.send(user_d);
-// })
-
-// router.get("/filter_restaurent",async (req,res)=>{
-//     const user_d = await Hotels.find({restaurent:true}).sort({price:-1}).lean().exec();
-//     res.send(user_d);
-// })
-
-// router.get("/filter_Laundry",async (req,res)=>{
-//     const user_d = await Hotels.find({Laundry:true}).sort({price:-1}).lean().exec();
-//     res.send(user_d);
-// })
 
 
 

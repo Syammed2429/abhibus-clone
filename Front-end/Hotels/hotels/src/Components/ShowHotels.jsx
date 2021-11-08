@@ -155,7 +155,7 @@ function ShowHotel({city,checkin,checkout,guest}){
                             </div>
                             <div>
                                 <p className="red"> ₹{e.price}</p>
-                                <button onClick={() => { console.log(e._id, "id"); } }>Book Now</button>
+                                <button onClick={() => { console.log(e._id, "id"); } }>Reserve</button>
                             </div>
 
                         </div>;
