@@ -7,7 +7,7 @@ function ShowRoom(){
     const [showImg,setShowImg] =useState("")
     const [sh,setsh] =useState(false)
     const getData =async ()=>{
-          await  axios.get(`http://localhost:3210/hotels/618103d57c63067354e352d0`)
+          await  axios.get(`http://localhost:3210/hotels/618d6e45c4086f4e31447f2b`)
           .then((res)=>{
             setData(res.data);
             console.log(res.data);

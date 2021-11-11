@@ -12,7 +12,7 @@
 .Footers{
     color: lightslategrey;
     width: 20%;
-   
+    height: fit-content;
     margin-left: 5%;
 
 }

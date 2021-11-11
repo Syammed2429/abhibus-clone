@@ -97,21 +97,24 @@ function ShowHotel({city,checkin,checkout,guest}){
                     <p>1 Adult,1 Children, 1 Room </p>
                 </div>
             </div>
-            <div>Sort By
-                    <select onChange={(e) => { getDetails(e.target.value); } }>
-                        <option value="desc">Price: High To Low</option>
-                        <option value="asc"> Price: Low To High</option>
-                    </select>
+            <div className="teal_p">
+                     <div className="right_p">
+                         Sort By
+                         <select onChange={(e) => { getDetails(e.target.value); } }>
+                             <option value="desc">Price: High To Low</option>
+                             <option value="asc"> Price: Low To High</option>
+                         </select>
+                     </div>
             </div>
             <div  className="flex">
                 <div>
-                    <div>
-                        <label>{999}-{price}</label>
+                    <div className="filter_p">
+                        {/* <label>{999}-{price}</label>
                         <input type="range" name="price" 
                          min="999" max="50000"onChange={(e) => { console.log(e.target.value);
-                        setPrice(e.target.value) } } />
+                        setPrice(e.target.value) } } /> */}
                       <div>
-                        <h3>Filter</h3> 
+                        <h3 className="filter_p_h3">Filter</h3> 
                         
                         <br/>
                         <input name="ac"
@@ -140,7 +143,7 @@ function ShowHotel({city,checkin,checkout,guest}){
                         type="checkbox" 
                         value="Laundry" 
                         onChange= {(e)=>{setLaundry(e.target.checked)}}/> Laundry  <br/>
-                        <button onClick={filteredData}>Apply</button>
+                        <button className="filter_p_button" onClick={filteredData}>Apply</button>
                       </div>
                     </div>
                   

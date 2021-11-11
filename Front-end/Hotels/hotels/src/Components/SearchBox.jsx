@@ -16,7 +16,7 @@ function SearchBox(){
     const handlesubmit = (e)=>{
         console.log("city",city,checkin,checkout,guest)
        setShow(true);
-      // window.location.href='/Showhotels'
+     
     }
     return (
 

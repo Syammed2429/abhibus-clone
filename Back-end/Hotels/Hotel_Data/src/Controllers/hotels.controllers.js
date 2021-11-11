@@ -6,7 +6,7 @@ const router=express.Router();
 
 
 router.post("",async (req,res)=>{
-
+   
     const hotel = await Hotels.create(req.body);
     return res.send({"hotel":hotel})
 })
