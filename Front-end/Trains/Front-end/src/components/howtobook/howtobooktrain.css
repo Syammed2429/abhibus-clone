@@ -1,0 +1,18 @@
+.process-steps-s{
+    display: grid;
+    grid-template-columns: 28% 3.9% 28% 3.9% 28%;
+    grid-gap: 2%;
+}
+.process-steps-s-div{
+    border: 1px solid rgb(219, 219, 219);
+}
+.inside-process-grid{
+    display: grid;
+    grid-template-columns:30% 65%;
+    grid-gap: 5%;
+    align-items: center;
+}
+.alignarrows-s{
+    align-items: center;
+    padding:48px 0px;
+}

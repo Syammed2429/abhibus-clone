@@ -1,0 +1,20 @@
+.footer-two-s{
+    width: 100%;
+    background-color:rgb(236, 236, 236);
+}
+.footer-two-insider-s{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    padding-left: 3%;
+}
+.footertwo-space-s{
+    padding-left: .62%;
+    padding-right: .62%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.footertwo-space-sec-s{
+    padding-right: 5%
+}
