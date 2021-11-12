@@ -1,0 +1,209 @@
+body{
+    font-family: 'Open Sans',Arial,sans-serif!important
+}
+
+h1{
+    color: #000;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+  
+}
+p{
+    margin: 1% 0.3%;
+}
+.mb{
+    margin-bottom: 1.5 rem;
+
+}
+.nav-pills {
+    margin-top: 1 rem;
+    width: 45%;
+    margin: 2% 20%;
+    z-index: 99;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: space-around;
+   
+}
+.nav-pills>li{
+    list-style: none;
+    margin: 4% 2% ;
+    width: 100px;
+    height: 30px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0.25rem!important;
+    padding-bottom: 0.25rem !important;
+    top: 10px;
+    bottom: 10px;
+    justify-content: center;
+}
+img{
+    height:2%;
+    width: 100%;
+}
+.nav-pills>.active{
+    background-color: #DA0037;
+    color: white;
+}
+
+.flex{
+    display: flex;
+   justify-content: space-evenly;
+}
+.popularCities{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popularCities>div>img{
+   height: 80%;
+   width: 100%;
+   opacity: 0.6;
+}
+
+.popularCities>div>div{
+    margin: -1%;
+    padding: 0%;
+}
+
+.popularCities>div{
+   position: relative;
+}
+.cities{
+    border: 1px solid lightslategray;
+    height: 340px;
+    width: 27%;
+   
+}
+.cities>div{
+   justify-content: space-between;
+    padding: 0%;
+    height: 80%;
+    margin: 0% 2.5%;
+}
+
+.cities>div>div>p{
+    margin: 1%;
+    padding: 0%;
+    height: 5%;
+    width: 180px;
+}
+.bottom-left {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    background-color: rgba(4, 13, 20, 0.808);
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    height: 30px;
+}
+
+li{
+    list-style: none;
+    margin: 2% 1%;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0.25rem!important;
+    padding-bottom: 0.25rem !important;
+    top: 10px;
+    bottom: 10px;
+    justify-content: center;
+}
+
+.offer{
+    width: 75%;
+    font-size: 1.125rem;
+   font-weight: 600;
+   
+    justify-content:start;
+  text-align: start;
+  top: 5px;
+  bottom: 2px;
+}
+.offer_block{
+    border: 1px solid grey;
+    width: 90%;
+    margin:2.5% 5%;
+}
+
+.offer_img{
+    width: 31%;
+    margin:1% 1%;
+    margin-top: 0%;
+    justify-content: space-between;
+}
+.offer_block>div,ul{
+    margin: 0%;
+    padding: 0%;
+}
+
+ul{
+    height: 75px;
+    margin:0% 1%;
+}
+
+.offer-cont{
+    background-image: url("https://static.abhibus.com/assets/img/homebg.png") ;
+    background-repeat:repeat ;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: initial;
+    
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    
+}
+.red{
+    color: red;
+    margin: 0;
+    padding: 0;
+    height: 15px;
+}
+button{
+    background-color: #c60001;
+    color: white;
+    border: none;
+    height: 30px;
+    margin: 2%;
+}
+.why{
+    border: 1px solid grey;
+    color: grey;
+    margin: 2% 4%;
+    text-align: left;
+}
+.why>h4{
+    margin:1% 2.5% ;
+}
+
+.social{
+    height: 50px;
+    width: 50px;
+    
+}
+
+.social_div{
+    color: grey;
+    width: 92%;
+    height: 50px;
+   
+    justify-content: space-evenly;
+    margin: 1% 4%;
+    display: flex;
+}
+
+.social_div>p{
+    text-align: end;
+    width: 50%;
+    
+}
