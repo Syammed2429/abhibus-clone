@@ -1,4 +1,6 @@
 import React from 'react';
+// import Carousel from './Sliderbar';
+import { Test2 } from './Test2';
 
 const BookSRTC = () => {
 
@@ -14,12 +16,16 @@ const BookSRTC = () => {
                             <button>{">"}</button>
                         </ul>
                     </div>
-                    <div className="d-flex justify">
+                    {/* <div className="d-flex justify">
                         <h1 className="mr-4">fffg</h1>
                         <h1 className="mr-4">fffg</h1>
                         <h1 className="mr-4">fffg</h1>
-                        <h1 className="mr-4">fffg</h1>
-                    </div>
+                        <h1 className="mr-4">fffg</h1> */}
+                    <div style={{ width: "95%", margin: "auto", backgroundColor: "white", marginTop: "5px" }}> <Test2 /></div>
+                    {/* <Test2 /> */}
+
+
+                    {/* </div> */}
                 </div>
             </div>
         </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, Routes, Route, BrowserRouter, Link } from "react-router-dom";
 
 
 const DisplayBusDetails = () => {
@@ -10,12 +10,14 @@ const DisplayBusDetails = () => {
     return (
         <>
             <div>
+                {/* </BrowserRouter> */}
                 <h1>Hello</h1>
                 {/* {console.log('busData:', busData)} */}
                 <div>
-                    <h1>Leaving : {params.get("leaving")} </h1>
+                    <h1>Leaving: {params.get("leaving")} </h1>
                 </div>
             </div>
+            {/* <NavBar /> */}
         </>
     );
 }

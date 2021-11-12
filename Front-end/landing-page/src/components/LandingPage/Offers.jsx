@@ -1,4 +1,5 @@
 import React from 'react';
+import { Test2 } from './Test2';
 
 const Offers = () => {
 
@@ -13,16 +14,13 @@ const Offers = () => {
                             <li>All Offers</li>
                             <li>Bus Offers</li>
                             <li>View All </li>
-                            <button>{"<"}</button>
-                            <button>{">"}</button>
+                            {/* <button>{"<"}</button>
+                            <button>{">"}</button> */}
                         </ul>
                     </div>
-                    <div className="d-flex">
-                        <h1>fffg</h1>
-                        <h1>fffg</h1>
-                        <h1>fffg</h1>
-                        <h1>fffg</h1>
-                    </div>
+
+                    <div style={{ width: "95%", margin: "auto", backgroundColor: "white", marginTop: "50px" }}> <Test2 /></div>
+
                 </div>
             </div>
         </>

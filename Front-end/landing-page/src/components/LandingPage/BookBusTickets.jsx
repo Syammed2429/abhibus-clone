@@ -14,7 +14,6 @@ const BookBusTickets = () => {
 
     React.useEffect(() => {
         console.log("Ogg", busData)
-        // getData(formData.leaving, formData.going);
 
     }, [])
 
@@ -103,6 +102,7 @@ const BookBusTickets = () => {
                             onChange={handleChange}
                             name="leaving"
                             type="text"
+                            required
                             placeholder="Leaving from" />
                         <input
                             onChange={handleChange}
@@ -125,11 +125,11 @@ const BookBusTickets = () => {
                             value="Search" />
                     </form>
                 </div>
-                {console.log("Bus data from boottom", busData)}
+                {/* {console.log("Bus data from boottom", busData)} */}
                 {/* Search Box ends */}
 
 
-                <Test busData={formDetails} />
+                {/* <Test busData={formDetails} /> */}
 
             </div>
         </>
