@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
-import "../Components/Css/ShowHotels.css"
+import { useLocation,useHistory } from "react-router";
+import "../Components/Css/ShowHotels.css";
+
+
+
+
 function ShowHotel({city,checkin,checkout,guest}){
-   // console.log(city,checkout,checkin,guest)
+    const location = useLocation();
+    const history = useHistory();
+    console.log(location.state.city,location.state.checkout,location.state.checkin,location.state.guest)
     const [details,setDetails] = useState(null);
     const [isError,SetError] =useState(false);
     const [loading,setLoading] = useState(false)
@@ -16,7 +23,21 @@ function ShowHotel({city,checkin,checkout,guest}){
     const [Restaurent,setRestaurent]=useState(false)
     const [Front_Desk,setFront_Desk]=useState(false)
     
-    
+    checkin=location.state.checkin;
+     checkout= location.state.checkout;
+     guest = location.state.guest
+    const move=(id,checkout,checkin,guest)=>{
+        //console.log(id,checkout,checkin,guest)
+        history.push({
+            pathname:"/showRooms",
+            state: { 
+                id:id,
+                checkin:checkin,
+                checkout:checkout,
+                 guest:guest
+            }
+        });
+    }
     useEffect(async()=>{
        await axios.get(`http://localhost:3210/hotels/sort_asc`)
 
@@ -90,11 +111,14 @@ function ShowHotel({city,checkin,checkout,guest}){
 
             ShowHotels TextArea
             {Show&&  <><div>
-                <h3>{details.length}Hotels Found </h3>
                 <div className="flex">
-                    <p>Check-in</p>
-                    <p>Check-out</p>
-                    <p>1 Adult,1 Children, 1 Room </p>
+                <h3>{location.state.city} </h3>
+                <p className="p_p">-{details.length}Hotels Found</p>
+                </div>
+                <div className="flex">
+                    <p className="teal_p">Check-in - {checkin.getDate()}/{checkin.getMonth()}/{checkin.getYear()},</p>
+                    <p className="teal_p">{"           "}Check-out- {checkout.getDate()}/{checkout.getMonth()}/{checkout.getYear()},</p>
+                    <p>{"  "}Guest - {location.state.guest} </p>
                 </div>
             </div>
             <div className="teal_p">
@@ -156,9 +180,10 @@ function ShowHotel({city,checkin,checkout,guest}){
                                 <p>{e.hotel_name}</p>
                                 <p>{e.location}</p>
                             </div>
-                            <div>
-                                <p className="red"> ₹{e.price}</p>
-                                <button onClick={() => { console.log(e._id, "id"); } }>Reserve</button>
+                            <div className="btn-margin_p">
+                                <div className="red"> ₹{e.price}</div>
+                                <button onClick={() => { console.log(e._id, "id");
+                            move(e._id,checkout,checkin,guest) } }>Reserve</button>
                             </div>
 
                         </div>;

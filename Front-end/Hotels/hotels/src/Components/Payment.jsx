@@ -1,14 +1,17 @@
 import { useState,useEffect } from "react"
-
+import { useLocation,useHistory } from "react-router";
 import "../Components/Css/Payment.css"
 import axios from "axios";
 import Footer from "./Footers";
 
-function Pay ({type,checkin,checkout,guest}){
+function Pay ({type,checkin,checkout,guest,id}){
+    const location = useLocation();
     const [price,setPrice]= useState(0);
     const [data,setData] = useState([]);
     const [discountedPrice,setDiscountedPrice] =useState(0);
-    const [stop,setStop]=useState(false)
+    const [stop,setStop]=useState(false);
+    checkin=location.state.checkin;
+    checkout= location.state.checkout;
     useEffect( ()=>{
         try{
           
@@ -21,12 +24,22 @@ function Pay ({type,checkin,checkout,guest}){
       setStop(true)
       }
       
-    },[stop])
+    },[stop]);
+    const history = useHistory();
+    const redirect=()=>{
+        alert(` Your Booking is confirm .
+                Thank You for using ABHIBUS 
+                Happy and safe Journey `);
+
+           
+            history.push("/hotels")    
+    }
     async function  getData(){
-        await axios.get(`http://localhost:3210/hotels/618103d57c63067354e352d0`)
+        console.log(location.state)
+        await axios.get(`http://localhost:3210/hotels/${location.state.checkout}`)
         .then((res)=>{
           setData(res.data);
-            if(type==="oak"){
+            if(location.state.id==="oak"){
                 setPrice(res.data.oak_price);
                 setDiscountedPrice(res.data.oak_price)
 
@@ -36,7 +49,7 @@ function Pay ({type,checkin,checkout,guest}){
 
             }
           //  console.log(price)
-         console.log("data",data)
+        // console.log("data",data)
         
 
         }).catch((e)=>{
@@ -59,19 +72,22 @@ function Pay ({type,checkin,checkout,guest}){
    
     const handlecoupon=()=>{
        // setDiscountedPrice(price)
-        if(couponCode==="SIMPLNOV")
+        if(couponCode==="SIMPLNOV" && applyCoupon ==true)
         {
             let total = price-150;
             setDiscountedPrice(total);
            
 
-        }else if(couponCode==="ABHI500"){
+        }else if(couponCode==="ABHI500" && applyCoupon ==true){
             let total = price-500;
             setDiscountedPrice(total);
         }
-        else{
-            setInvalid(true);
-
+        else if(applyCoupon===false){
+            
+            setDiscountedPrice(price)
+        }else{
+           setInvalid(true);
+           setCoupoCode(" ")
         }
         setTimeout(() => {
             invalid_set();
@@ -133,6 +149,7 @@ function Pay ({type,checkin,checkout,guest}){
                         <div className="btn-back flex coupon">
                             <input className="input_p" type="checkbox" onChange={(e)=>{
                                     setApplyCoupon(e.target.checked);
+                                    console.log(applyCoupon)
                             }} /> 
                             <lable>I have a coupon code (optional but useful)</lable>
 
@@ -233,7 +250,7 @@ function Pay ({type,checkin,checkout,guest}){
                                 
                             </div>
                             <div  className="btn-back">
-                                <button onClick={()=>{console.log(name,cvv,month,Year,number)}}>Make Payment</button>
+                                <button onClick={redirect}>Make Payment</button>
                             </div>
                         </div>
                     </div>
@@ -242,17 +259,17 @@ function Pay ({type,checkin,checkout,guest}){
                    
                     <div>
                     <img className="pay_thumb" src={data.thumbnail} alt="payment thumbnail"/>
-                    <p>{data.location}</p>
+                    <p>{data.address}</p>
                     </div>
                     <hr/>
                     <div>Room Type : {type}</div>
                     <hr/>
                     <div>
-                        <p>Check-In : {checkin.getDate()}-{checkin.getMonth()}-{checkin.getYear()}</p>
-                        <p>Check-out : {checkout.getDate()}-{checkout.getMonth()}-{checkout.getYear()}</p>
+                        <p>Check-In : {location.state.checkin.getDate()}-{location.state.checkin.getMonth()}-{location.state.checkin.getYear()}</p>
+                        <p>Check-out : {location.state.guest.getDate()}-{location.state.guest.getMonth()}-{location.state.guest.getYear()}</p>
                     </div>
                     <hr/>
-                    <div >Guest : {guest}</div>
+                    <div >Guest : {location.state.type}</div>
                     <hr/>
                     <div>
                         Amount :₹{price}

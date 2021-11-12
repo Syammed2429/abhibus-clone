@@ -14,6 +14,15 @@ const mystyle={
 function Footer(){
 
     return (
+        <>
+        <div className="social_div">
+                <p className="social">We're Social! Connect with us on</p>
+                <img className="social" src="https://image.similarpng.com/thumbnail/2020/05/Facebook-logo-gray-color-PNG.png" alt="facebook"/>
+                <img className="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsIEK-QwsgpvQy2wCTKBh64sX6mY24pZKO5qhXUShXYfyaQ3R83UTUAWkWMWDAyLiKcck&usqp=CAU" alt="instagram"/>
+                <img className="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMAdmTmJCHxqALrFeAe3hjYa6K4rPw2hWxO0qzRZMZHH_IL0b0zEhKTDaDCxU1iQE_Lms&usqp=CAU" alt="twitter"/>
+                <img className="social" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnXsZjKNOIVc58Rw3NEJDSf6GikmHVVxsi7Avb28AWJnGsAJ2CY-HxRBLpiDUTcD0FwlM&usqp=CAU" alt="youtube"/>
+                
+           </div>
         <div style={mystyle}>
 
             <div className="Footers">
@@ -94,6 +103,7 @@ function Footer(){
                 </ul>
             </div>
         </div>
+        </>
     )
 
 }

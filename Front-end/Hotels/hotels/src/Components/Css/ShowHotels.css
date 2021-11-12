@@ -4,7 +4,7 @@
     width: 200px;
 }
 .suggestion-width{
-    width: 100%;
+    width: 150%;
     border:  1px solid lightslategray;
     justify-content: space-between;
 }
@@ -39,4 +39,19 @@ input[type="checkbox" ] {
     color: lightslategray !important;
     padding: initial;
     border: initial;
+}
+
+.btn-margin_p{
+    margin: 5%;
+}
+.btn-margin_p>button{
+    margin-top: 5%;
+    width: 150%;
+}
+.p_p{
+   
+    margin-top:2.2% ;
+}
+.green_p{
+    background-color: cadetblue;
 }

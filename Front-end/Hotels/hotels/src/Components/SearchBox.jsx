@@ -3,7 +3,7 @@ import "../Components/Css/Search.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ShowHotel from "./ShowHotels";
-import { Switch,Route , Link } from "react-router-dom";
+import { Switch,Route , Link , useHistory } from "react-router-dom";
 
 function SearchBox(){
     const [city,setCity] = useState("Pune");
@@ -11,12 +11,18 @@ function SearchBox(){
     const [checkout,setCheckout]=useState(new Date());
     const [show,setShow]= useState(false)
     const [guest,setGuest] =useState("1 Adult 0 children")
-
+    const history = useHistory();
 
     const handlesubmit = (e)=>{
-        console.log("city",city,checkin,checkout,guest)
+       // console.log("city",city,checkin,checkout,guest)
        setShow(true);
-     
+       history.push({
+            pathname:"/showHotels",
+            state: { city: city,
+            checkin:checkin,
+        checkout:checkout,
+    guest:guest }
+        });
     }
     return (
 

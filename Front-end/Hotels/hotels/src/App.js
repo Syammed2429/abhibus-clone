@@ -4,17 +4,22 @@ import Hotel from './Components/Hotel';
 import ShowHotel from './Components/ShowHotels';
 import { Switch,Route , Link } from "react-router-dom";
 import Pay from "./Components/Payment"
+import ShowRoom from './Components/ShowRoom';
+
+
+
 function App() {
   return (
     <div className="App">
-       <Link to="/"> <Hotel /></Link>
+       {/* <Link to="/"> <Hotel /></Link>
       
-       <Link to="/Showhotels"> <ShowHotel/></Link>
+       <Link to="/Showhotels"> <ShowHotel/></Link> */}
 
        <Switch>
-        <Route path="/" >
-          <h1>Hotel Search</h1>
-        </Route>
+        <Route exact path="/hotels" component={Hotel} />
+          <Route exact path="/showHotels" component={ShowHotel}/>
+          <Route exact path="/showRooms" component={ShowRoom}/>
+          <Route exact path="/payments" component={Pay}/>
        
         <Route >
         <h1>404  not Found</h1>

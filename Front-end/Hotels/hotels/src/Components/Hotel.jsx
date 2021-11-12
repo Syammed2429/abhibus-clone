@@ -7,7 +7,7 @@ function Hotel() {
     <div>
      
      <SearchArea />
-    <ShowRoom />
+   
     </div>
   );
 }
