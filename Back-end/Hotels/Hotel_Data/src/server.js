@@ -15,9 +15,9 @@ app.use("/hotels",hotelController);
 
 
    
-app.listen(3210,async ()=>{
+app.listen(2924,async ()=>{
       await  connect();
-     console.log("listening on port 3210")
+     console.log("listening on port 2924")
 });
 
  

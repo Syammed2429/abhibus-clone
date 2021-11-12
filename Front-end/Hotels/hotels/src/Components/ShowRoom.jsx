@@ -29,7 +29,7 @@ function ShowRoom(){
   }
     const getData =async ()=>{
      // console.log(location.state,"state")
-          await  axios.get(`http://localhost:3210/hotels/${location.state.id}`)
+          await  axios.get(`http://localhost:2924/hotels/${location.state.id}`)
           .then((res)=>{
             setData(res.data);
             console.log(res.data);
@@ -69,7 +69,7 @@ function ShowRoom(){
     },[sh])
    const [suggestionImg,setSuggestionImg]= useState([]);
    const suggestion=async()=>{
-    await  axios.get(`http://localhost:3210/hotels/suggestion`)
+    await  axios.get(`http://localhost:2924/hotels/suggestion`)
     .then((res)=>{
       setSuggestionImg(res.data);
       console.log(res.data);

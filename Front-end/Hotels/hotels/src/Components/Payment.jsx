@@ -36,7 +36,7 @@ function Pay ({type,checkin,checkout,guest,id}){
     }
     async function  getData(){
         console.log(location.state)
-        await axios.get(`http://localhost:3210/hotels/${location.state.checkout}`)
+        await axios.get(`http://localhost:2924/hotels/${location.state.checkout}`)
         .then((res)=>{
           setData(res.data);
             if(location.state.id==="oak"){

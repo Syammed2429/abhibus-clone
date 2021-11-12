@@ -39,7 +39,7 @@ function ShowHotel({city,checkin,checkout,guest}){
         });
     }
     useEffect(async()=>{
-       await axios.get(`http://localhost:3210/hotels/sort_asc`)
+       await axios.get(`http://localhost:2924/hotels/sort_asc`)
 
         .then((res)=>{
 
@@ -72,7 +72,7 @@ function ShowHotel({city,checkin,checkout,guest}){
             query["front_Desk"] = Front_Desk
         }
        console.log(query);
-       axios.get(`http://localhost:3210/hotels/filter_query`,
+       axios.get(`http://localhost:2924/hotels/filter_query`,
         {
              params:query
         })
@@ -91,7 +91,7 @@ function ShowHotel({city,checkin,checkout,guest}){
 
     const getDetails=async(order)=>{
        // console.log(order)
-        axios.get(`http://localhost:3210/hotels/sort_${order}`)
+        axios.get(`http://localhost:2924/hotels/sort_${order}`)
 
         .then((res)=>{
 
@@ -109,7 +109,7 @@ function ShowHotel({city,checkin,checkout,guest}){
             {loading&&<p>Loading</p>}
             {isError&&<div>"SomeThing went wrong"</div>}
 
-            ShowHotels TextArea
+
             {Show&&  <><div>
                 <div className="flex">
                 <h3>{location.state.city} </h3>
