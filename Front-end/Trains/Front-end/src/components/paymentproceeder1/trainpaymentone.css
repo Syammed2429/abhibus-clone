@@ -1,0 +1,26 @@
+.train-payment-one-s-main{
+    margin-top:50px;
+    padding: 0% 9%;
+}
+
+.train-payment-one-s-main-grid{
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-gap: 1%;
+}
+.insider-grid-trainpayone-s{
+    display: grid;
+    grid-template-columns:6% 78%;
+    grid-gap: 2%;
+}
+.irctc-register-verify-s{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.payment-train-input-s{
+    display: grid;
+    grid-template-columns:20% 15% 15% 20% 15% 5%;
+}
+.train-passenger-list-s{
+    align-items: center;
+}

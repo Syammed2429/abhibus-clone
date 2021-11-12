@@ -1,0 +1,11 @@
+.social-styler-s{
+    align-items: center;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.icon-sizer-s{
+    font-size:xx-large;
+    padding-left: 10px;
+}
