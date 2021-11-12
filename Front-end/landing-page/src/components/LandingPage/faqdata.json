@@ -1,0 +1,32 @@
+{
+    "data": {
+        "q1": "Q. What does a PNR number on my bus ticket mean?",
+        "a1": "Ans: PNR stands for Passenger Name Record. It is represented as a 10-digit number on your M-ticket or E-ticket.",
+        "q2": "Q. Will I have to pay extra money for online tickets booking?",
+        "a2": "No, there is no need to pay extra charges when booking bus ticket online.",
+        "q3": "Q. What are the payment options that AbhiBus accepts?",
+        "a3": "Ans: We accept various payment options to complete your booking like Debit card, Credit card, Net banking, Wallets, UPI, cash cards and more.",
+        "q4": "Q. Can I get discounts & offers on bus tickets at AbhiBus?",
+        "a4": "Ans: Yes, you will get the best fares on bus tickets bookings on AbhiBus by applying coupon codes before completing your transaction. Make your bus booking online at the lowest prices always at AbhiBus Bus Tickets Offers page. ",
+        "q5": "Q. Is it required to carry a print out of my bus ticket to board a bus ?",
+        "a5": "Ans: No, it's not compulsory. You can show your M-ticket or e-ticket on your mobile device before getting into the bus. But It is advisable to carry a government issued Identity card to verify your identity before boarding the bus.",
+        "q6": "Q. What are the documents should I carry while boarding a bus?",
+        "a6": "Ans: You can carry one of the below ID Proof while travelling: PAN Card, Aadhar Card Voter ID Card, Driving License, Student ID Card, Passport.",
+        "q7": "Q. What should I do if I have lost my ticket?",
+        "a7": "Ans: In case your online bus booking ticket is lost, you can show the message which has been received to your mobile number/WhatsApp or you can login to your email ID to take printout of the e-ticket. For further assistance, please contact our customer support.",
+        "q8": "Q. I am unable to select a specific Bus seat/operator/date/route on AbhiBus. What should I do?",
+        "a8": "Ans: We request you to send the screenshot of the specific issue on the site to Customer Care. So that we will fix the bus booking online issues on the site as soon as possible. ",
+        "q9": "Q. I have applied the promo code on AbhiBus but did not receive any cashback offer. What should I do?",
+        "a9": "Ans: If you used a valid cashback coupon code while making a booking, then the corresponding cashback is credited to Abhicash after completion of Date of Journey.Please check the terms and conditions of the promotional offer carefully. If you have not received the cashback yet as per the terms and conditions, please send us an email at support@abhibus.com with the details of the booking and promotional offer applied. ",
+        "q10": "Q. How to reschedule my bus ticket? ",
+        "a10": "Ans: No, you cannot reschedule online bus tickets, but you can cancel the already booked ticket following the ticket cancelation process and you can book bus tickets on your postponed date. ",
+        "q11": "Q. Can I cancel my bus ticket at any time",
+        "a11": "Ans: Yes, you can. Once the online bus booking ticket is done, all you have to do is login in to the AbhiBus website or mobile app and follow the cancellation process.",
+        "q12": "Q. Will I get a refund in case of a failed transaction on Abhibus?",
+        "a12": "Ans: Yes, the funds in case of a failed transaction if debited from Abhicash wallet is credited back in 15 minutes and if debited from source is credited back in 7 bank working days",
+        "q13": "Q. My money has been deducted, but the tickets are not booked online. What should I do now? ",
+        "a13": "Ans: The online booking confirmation might not get generated due to fluctuations in the bank networks in most of the cases. In such scenarios we suggest you to choose a different mode of payment to complete your transaction. Before booking a new ticket, please read the following: ",
+        "a14": "1. You will receive the ticket confirmation via SMS & email within 15 minutes if the booking amount is received by AbhiBus. If you do not receive the train tickets or bus booking online confirmation details within 15 minutes, the deducted amount will be auto refunded to your account within one hour. After 15 minutes you can go ahead and make a new booking. ",
+        "a15": "2. Sometimes, AbhiBus might not receive the booking amount even if it’s deducted from your account. Such a scenario may arise when your bank puts a hold on the payment. Your bank may release the hold on such payments in 24-48 hours, where the amount deducted is reversed by the bank. Go to the Booking/Payment Failures section in the chatbot to find out if AbhiBus received the payment. If the Payment Received by AbhiBus is 'No' please go ahead and make a new bus booking or train tickets online booking with us. "
+    }
+}
