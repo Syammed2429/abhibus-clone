@@ -16,7 +16,7 @@ function ShowRoom(){
     const checkout = location.state.checkout;
     const pay=(id,checkout,checkin,guest,type)=>{
       history.push({
-        pathname:"/payments",
+        pathname:"/hotelpayments",
         state: { 
             type:type,
             
@@ -54,6 +54,7 @@ function ShowRoom(){
     }
     useEffect(()=>{
         getData();
+        suggestion()
         readmore.current.focus();
         if(sh){
         setShowImg(data.gallery[0]);
@@ -66,7 +67,18 @@ function ShowRoom(){
             i=0;
         }, 4000);}
     },[sh])
-   
+   const [suggestionImg,setSuggestionImg]= useState([]);
+   const suggestion=async()=>{
+    await  axios.get(`http://localhost:3210/hotels/suggestion`)
+    .then((res)=>{
+      setSuggestionImg(res.data);
+      console.log(res.data);
+
+    }).finally(
+        //console.log(data)
+       
+      )
+   }
     return (
         <div  >
           <div className="flex_ShowRoom_p ">
@@ -151,32 +163,10 @@ function ShowRoom(){
                                 }>Book Now</button>
                               </div>
                            </div>
-                          <div >
-                          <h2 className="text-decor">Cancelation Policy</h2>
-                           <hr/>
-                           <div className="cancellation_div_p">
-                           <ul className="special-li">
-                              <li>Standard Check-In Time 12:00 PM.</li>
-                              <li>Standard Check-Out Time 11:00 AM.</li>
-                              <li>Early Check-In Policy Early check-in between 10 am to 12 pm is possible (free of charge) but can be confirmed, subject to availability, only upon arrival at the hotel and not in advance. For check-in prior to 10 AM, an extra night's tariff shall be applicable.</li>
-                              <br/>
-                              <li>Late Check-Out Policy Late check-out between 12 pm and 1 pm is possible (free of charge) but can be confirmed, subject to availability, only at the time of check-out and not in advance. For check-out after 1 PM, an extra night's tariff shall be applicable.</li>
-                              <br/>
-                              <li>Child Reservation Policy A maximum of 1 child upto an age of 8 years and an extra infant upto an age of 2 years is allowed free of charge, subject to room occupancy capacity. Breakfast will be included in stay but no extra bed or mattress will be provided. Extra person charges are applicable for anyone above 8 years of age. Extra person charges are also applicable for extra kids during check-in.</li>
-                              <br/>
-                              <li>Identification Card All adults must carry one of these photo ID cards at the time of check-in: Driving License, Voters Card, Passport, Ration Card or Aadhar Card. PAN Cards are not accepted.</li>
-                              <br/>
-                              <li>Other Policies Our hotels reserve the right of admission to ensure safety and comfort of guests. This may include cases such as local residents, unmarried and unrelated couples among others.</li>
-                              <br/>
-                              <li>No cancellation fee is charged if the booking is cancelled 24 hours prior to the standard check-in time.</li>
-                              <br/>
-                              
-                           </ul>
-                           </div>
-                          </div>
+                        
                       </div>
            
-              
+                      <div className="short_div_p">
                         <div className="short-box">
                             <h3> About {data.hotel_name}</h3>
                                 <div >
@@ -191,9 +181,40 @@ function ShowRoom(){
                                 onClick={smoothScroll}>Read More</a>}
                                 />
                                 </div>
+                               
+                        </div>
+                        <div className="border short-box">
+                                 <img className="sugg_img" src={suggestionImg.thumbnail} alt="suggestion Hotel"/> 
+                                 <h4>{suggestionImg.hotel_name}</h4>
+                                 <p className="red">₹{suggestionImg.price}</p>
+                         </div>
+                         
                         </div>
                 
          </div>
+         <div >
+                          <h2 className="text-decor h4_room_p">Cancelation Policy</h2>
+                           <hr/>
+                           <div className="cancellation_div_p">
+                           <ul className="special-li">
+                              <li>Standard Check-In Time 12:00 PM.</li>
+                              <li>Standard Check-Out Time 11:00 AM.</li>
+                              <li>Early Check-In Policy Early check-in between 10 am to 12 pm is possible (free of charge) but can be confirmed, subject to availability, only upon arrival at the hotel and not in advance. For check-in prior to 10 AM, an extra night's tariff shall be applicable.</li>
+                              
+                              <li>Late Check-Out Policy Late check-out between 12 pm and 1 pm is possible (free of charge) but can be confirmed, subject to availability, only at the time of check-out and not in advance. For check-out after 1 PM, an extra night's tariff shall be applicable.</li>
+                              
+                              <li>Child Reservation Policy A maximum of 1 child upto an age of 8 years and an extra infant upto an age of 2 years is allowed free of charge, subject to room occupancy capacity. Breakfast will be included in stay but no extra bed or mattress will be provided. Extra person charges are applicable for anyone above 8 years of age. Extra person charges are also applicable for extra kids during check-in.</li>
+                              
+                              <li>Identification Card All adults must carry one of these photo ID cards at the time of check-in: Driving License, Voters Card, Passport, Ration Card or Aadhar Card. PAN Cards are not accepted.</li>
+                            
+                              <li>Other Policies Our hotels reserve the right of admission to ensure safety and comfort of guests. This may include cases such as local residents, unmarried and unrelated couples among others.</li>
+                            
+                              <li>No cancellation fee is charged if the booking is cancelled 24 hours prior to the standard check-in time.</li>
+                              
+                              
+                           </ul>
+                           </div>
+                          </div>
          <div className="description_p" ref={readmore}>
            <h4 className="red description_p_h4">About {data.hotel_name}</h4>
            <hr/>

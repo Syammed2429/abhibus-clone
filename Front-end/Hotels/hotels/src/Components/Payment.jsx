@@ -146,15 +146,15 @@ function Pay ({type,checkin,checkout,guest,id}){
 
                     </div>
                     <div>
-                        <div className="btn-back flex coupon">
+                        <div className="btn-back flex coupon flex_det_p">
                             <input className="input_p" type="checkbox" onChange={(e)=>{
                                     setApplyCoupon(e.target.checked);
                                     console.log(applyCoupon)
                             }} /> 
-                            <lable>I have a coupon code (optional but useful)</lable>
+                            <lable className="lable_pay_p">I have a coupon code (optional but useful)</lable>
 
                                   {applyCoupon&& <div className="flex">
-                                  <input className="input_p" type="text" onChange={(e)=>{
+                                  <input className="input_p coupon_inp_p" type="text" onChange={(e)=>{
                                     setCoupoCode(e.target.value);
                                   }} /> 
                                   <button className="coupon-button" onClick={handlecoupon}>Apply</button>

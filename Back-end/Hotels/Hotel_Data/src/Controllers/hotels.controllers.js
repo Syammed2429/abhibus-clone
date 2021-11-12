@@ -31,8 +31,8 @@ router.get("/filter_ac",async (req,res)=>{
     res.send(user_d);
 })
 
-router.get("/filter_wifi",async (req,res)=>{
-    const user_d = await Hotels.find({wifi:true}).sort({price:-1}).lean().exec();
+router.get("/suggestion",async (req,res)=>{
+    const user_d = await Hotels.findOne().lean().exec();
     res.send(user_d);
 })
 
