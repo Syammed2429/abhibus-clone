@@ -40,7 +40,7 @@ router.get("/filter_query",async (req,res)=>{
     let qu= req.query;
    // console.log(qu)
     const user_d = await Hotels.find(qu).sort({price:-1}).lean().exec();
-    console.log(user_d)
+   // console.log(user_d)
     res.send(user_d);
 })
 
