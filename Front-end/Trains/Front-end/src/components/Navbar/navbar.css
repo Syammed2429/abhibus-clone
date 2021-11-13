@@ -1,0 +1,34 @@
+.main-navbar{
+    background: #efefef;
+    color: #444444;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.main-2ndnavbar{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    padding-left: 2%;
+}
+.thirdDiv{
+    display: grid;
+    vertical-align: middle;
+    align-items: center;
+    border: 1px solid black;
+    grid-template-columns: 41% 10% 9% 20% 5%;
+    color: #5d5d5d;
+    padding: 3px 16px;
+    line-height: 19px; 
+    font-size:15px;
+}
+.abhibus-navbar{
+    height: 55px
+}
+.red{
+    color: red;
+    font-size: 1.3rem;
+}

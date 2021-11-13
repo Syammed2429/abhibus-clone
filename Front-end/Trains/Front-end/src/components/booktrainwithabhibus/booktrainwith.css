@@ -1,0 +1,8 @@
+.booktrainwith-s{
+    border: 1px solid rgb(219, 219, 219);
+}
+.bookwithinsider-s{
+    display: grid;
+    grid-template-columns: 45% 52%;
+    grid-gap: 3%;
+}

@@ -1,0 +1,31 @@
+
+.Footers>ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    text-align: left;
+}
+
+.Footers{
+    width: 100%;
+}
+
+.Footers>ul {
+    text-align: left
+ }
+ p{
+     text-align: left;
+     padding-left:4%;
+     font-weight: bold;
+ }
+.black{
+    color: black;
+    font-size: 16px;
+}
+.footers-grid-s{
+    display: grid;
+    grid-template-columns:22% 24% 20% 17% 20%;
+}
