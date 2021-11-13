@@ -1,0 +1,29 @@
+header {
+  background: #efefef;
+  color: #444444;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.main {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #212529;
+}
+.logo {
+  height: 55px;
+}
+
+header,
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  margin-left: 40px;
+  /* padding: 15px; */
+  /* margin-left: 15px; */
+}
