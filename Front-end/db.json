@@ -1,0 +1,174 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "SPOT ON 80671 Bakhtawar Guest H",
+      "price": 1258,
+      "location": "Nakraunda, Dehradun, Uttarakhand, Dehradun",
+      "images": [
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113126/medium/466e487956cd3270.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113126/medium/108d6e559f2468c3.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113126/medium/22158a9978125438.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113126/medium/d8e7740e19ee7ca8.jpg"
+      ],
+
+      "24 hour front desk": true,
+      "AC": false,
+      "Wifi": true,
+      "Breakfast": false,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": true,
+      "Card Payment": true,
+      "Gym": false,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": false,
+      "Pet friendly": false,
+      "Spa": false
+    },
+    {
+      "id": 2,
+      "name": "OYO 81140 Hotel Valley Wood Inn",
+      "price": 1000,
+      "location": " Rajpur, Dehradun, Uttarakhand, 248006, India,",
+      "images": [
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113333/medium/ed67fefa19f179db.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113333/medium/ed67fefa19f179db.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113333/medium/252d88d65b6f33f7.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113333/medium/252d88d65b6f33f7.jpg"
+      ],
+
+      "24 hour front desk": true,
+      "AC": true,
+      "Wifi": true,
+      "Breakfast": true,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": false,
+      "Card Payment": true,
+      "Gym": false,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": true,
+      "Pet friendly": false,
+      "Spa": false
+    },
+    {
+      "id": 3,
+      "name": "Collection O 81245 Four Seasons",
+      "price": 1500,
+      "images": [
+        "https://images.oyoroomscdn.com/uploads/hotel_image/8166/medium/a9feba58cd6536bb.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/8166/medium/87716cc5391a254b.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/8166/medium/3d7f0e0214ac36ad.jpg",
+        "https://images.oyoroomscdn.com/uploads/hotel_image/113333/medium/252d88d65b6f33f7.jpg"
+      ],
+      "location": " Dehradun, Uttarakhand, Dehradun ",
+
+      "24 hour front desk": true,
+      "AC": true,
+      "Wifi": true,
+      "Breakfast": true,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": false,
+      "Card Payment": true,
+      "Gym": false,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": true,
+      "Pet friendly": false,
+      "Spa": false
+    },
+    {
+      "id": 4,
+      "name": "Treebo Hotel Trend JVR",
+      "price": 3000,
+      "images": [
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAPLE/maple_1_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_10_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_12_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/common/common_3_.jpg?w=750&h=352&fit=crop&fm=pjpg"
+      ],
+      "location": " Dehradun, Uttarakhand 248001, Dehradun, Uttarakhand",
+
+      "24 hour front desk": true,
+      "AC": true,
+      "Wifi": true,
+      "Breakfast": true,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": false,
+      "Card Payment": true,
+      "Gym": true,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": true,
+      "Pet friendly": false,
+      "Spa": true
+    },
+    {
+      "id": 5,
+      "name": "Treebo  JVR",
+      "price": 1580,
+      "images": [
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_12_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAPLE/maple_1_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_10_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_12_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/common/common_3_.jpg?w=750&h=352&fit=crop&fm=pjpg"
+      ],
+      "location": " Dehradun, Uttarakhand 248001, Dehradun, Uttarakhand",
+
+      "24 hour front desk": true,
+      "AC": true,
+      "Wifi": false,
+      "Breakfast": true,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": false,
+      "Card Payment": true,
+      "Gym": true,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": true,
+      "Pet friendly": false,
+      "Spa": false
+    },
+    {
+      "id": 6,
+      "name": "Treebo Trend JVR",
+      "price": 1500,
+      "images": [
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/common/common_3_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAPLE/maple_1_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_10_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/MAHOGANY/mahogany_12_.jpg?w=750&h=352&fit=crop&fm=pjpg",
+        "https://cs-images.treebo.com/Treebo_Trend_JVR/common/common_3_.jpg?w=750&h=352&fit=crop&fm=pjpg"
+      ],
+      "location": " Dehradun, Uttarakhand 248001, Dehradun, Uttarakhand",
+
+      "24 hour front desk": true,
+      "AC": true,
+      "Wifi": true,
+      "Breakfast": true,
+      "Restaurant": true,
+      "Swimming pool": true,
+      "ATM": false,
+      "Card Payment": true,
+      "Gym": true,
+      "Parking": true,
+      "Bar": false,
+      "Banquet hall": false,
+      "Conference room": true,
+      "Pet friendly": false,
+      "Spa": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
