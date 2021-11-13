@@ -24,10 +24,10 @@ const NavBar = () => {
                         <Link to=""><li>Bus</li></Link>
                         <Link to="/book-train-tickets"><li>Trains</li></Link>
                         <Link to="/hotels"><li>Hotels</li></Link>
-                        <li>Offers</li>
-                        <li>Get Free Rides</li>
-                        <li>My Bookings</li>
-                        <li>Login / Register</li>
+                        <Link to="/"><li>Offers</li></Link>
+                        <Link to="/"><li>Get Free Rides</li></Link>
+                        <Link to="/"><li>My Bookings</li></Link>
+                        <Link to="/"><li>Login / Register</li></Link>
                     </ul>
                 </header>
 
