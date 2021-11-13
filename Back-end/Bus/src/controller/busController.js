@@ -11,8 +11,15 @@ router.post("", async (req, res) => {
 
 router.get("/", async (req, res) => {
     const bus = await Bus.find({ from: req.query.from, to: req.query.to }).lean().exec();
-    // console.log('req.params.busName:', req.query.from, )
-    // console.log('Bus:', bus)
+     //console.log('req.params.busName:', req.query.from,req.query.to )
+     //console.log('Bus:', bus)
+    return res.status(200).send(bus)
+})
+router.get("/sort", async (req, res) => {
+    let qu=req.query.sorting;
+    const bus = await Bus.find({ from: req.query.from, to: req.query.to }).sort({qu:1}).lean().exec();
+     //console.log('req.params.busName:', req.query.from,req.query.to )
+     //console.log('Bus:', bus)
     return res.status(200).send(bus)
 })
 router.get("", async (req, res) => {

@@ -1,13 +1,13 @@
 import { useState,useEffect } from "react"
-import { useLocation,useHistory } from "react-router";
-import "../Components/Css/Payment.css"
+import { useLocation,useHistory } from "react-router-dom";
+import "../Payment.css"
 import axios from "axios";
-import Footer from "./Footers";
+import {Footer} from "../Footer";
 
 function Pay ({type,checkin,checkout,guest,id}){
     const location = useLocation();
     const [price,setPrice]= useState(0);
-    const [data,setData] = useState([]);
+   
     const [discountedPrice,setDiscountedPrice] =useState(0);
     const [stop,setStop]=useState(false);
     checkin=location.state.checkin;
@@ -15,12 +15,12 @@ function Pay ({type,checkin,checkout,guest,id}){
     useEffect( ()=>{
         try{
           
-            getData()
+         
       }catch(e){
         console.log(e)
       }
       finally{
-      console.log("finally",data)
+      console.log("finally")
       setStop(true)
       }
       
@@ -32,31 +32,9 @@ function Pay ({type,checkin,checkout,guest,id}){
                 Happy and safe Journey `);
 
            
-            history.push("/hotels")    
+            history.push("/")    
     }
-    async function  getData(){
-        console.log(location.state)
-        await axios.get(`http://localhost:2924/hotels/${location.state.checkout}`)
-        .then((res)=>{
-          setData(res.data);
-            if(location.state.id==="oak"){
-                setPrice(res.data.oak_price);
-                setDiscountedPrice(res.data.oak_price)
-
-            }else{
-                setPrice(res.data.maple_price);
-                setDiscountedPrice(res.data.oak_price)
-
-            }
-          //  console.log(price)
-        // console.log("data",data)
-        
-
-        }).catch((e)=>{
-            console.log("e",e)
-        })
-    }
-
+  
     const [guestName,setGuestName] = useState("Priya");
     const [email,setEmail] = useState("priyakumarigupta@gmail.com");
     const [mobile,setMobile] = useState(9102330360);
@@ -255,36 +233,10 @@ function Pay ({type,checkin,checkout,guest,id}){
                         </div>
                     </div>
                 </div>
-                <div className="border_div_p WID_P">
-                   
-                    <div>
-                    <img className="pay_thumb" src={data.thumbnail} alt="payment thumbnail"/>
-                    <p>{data.address}</p>
-                    </div>
-                    <hr/>
-                    <div>Room Type : {type}</div>
-                    <hr/>
-                    <div>
-                        <p>Check-In : {location.state.checkin.getDate()}-{location.state.checkin.getMonth()}-{location.state.checkin.getYear()}</p>
-                        <p>Check-out : {location.state.guest.getDate()}-{location.state.guest.getMonth()}-{location.state.guest.getYear()}</p>
-                    </div>
-                    <hr/>
-                    <div >Guest : {location.state.type}</div>
-                    <hr/>
-                    <div>
-                        Amount :₹{price}
-                        <br/>
-                        Total cost  : ₹{price}
-                    </div>
-                    <hr/>
-                    <div className=" text">
-                        Total Payable : <p className="red ">₹{discountedPrice}</p>
-                    </div>
-                </div>
+           
+                 
             </div>
-            <br/>
-            <br/>
-            <br/>
+           
             <Footer />
         </div>
     )

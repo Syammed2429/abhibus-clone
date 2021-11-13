@@ -1,0 +1,78 @@
+.flex_display_d{
+    display: flex;
+}
+.location_png_d{
+    height: 70px;
+    width: 70px;
+    top: 10px;
+    bottom: 10px;
+}
+.dot-icon-top span {
+    font-size: 22px;
+    color: #CF000B;
+}
+.dot-icon-section {
+    float: left;
+    margin: 29px 0px 0px 20px;
+    border-right: 1px dashed #e1e1e1;
+    position: relative;
+    height: 52px;
+}
+.dot-icon-bottom {
+   
+    right: 2px;
+    left: 13%;
+   
+    font-size: 22px;
+    color: #CF000B;
+}
+.grey_display_d{
+    background-color: lightslategrey;
+    height: 50px;
+}
+.grey_display_d>button{
+   margin:1% 2.5%;
+ 
+}
+.grey_display_d>p{
+    margin:1% 2.5%;
+  
+ }
+
+.arrow-icon-center span {
+    font-size: 16px;
+    color: #999;
+}
+.text_display_d{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 2%;
+}
+.red_display_d{
+    color: red;
+}
+.button_display_d{
+    height: 50px;
+    margin: 2.5%;
+}
+.border_display_d{
+    border: 1px solid lightslategray;
+    box-shadow: 2px 1px ;
+    width: 85%;
+    margin: 3%;
+    justify-content: space-evenly;
+}
+.margin_display_d{
+    margin: 4%;
+}
+
+.margin_display_d div{
+    margin: 0%;
+}
+
+.btn_display_d{
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+
+}

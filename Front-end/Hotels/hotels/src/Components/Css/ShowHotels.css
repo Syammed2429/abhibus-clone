@@ -21,7 +21,7 @@
     width: 150%;
 }
 .filter_p_h3{
-   
+    border: 1px solid lightslategrey;
     text-align: center !important;
     margin: 1%;
     margin-bottom: 0%;
@@ -37,7 +37,7 @@ input[type="checkbox" ] {
     
     box-sizing: border-box;
     color: lightslategray !important;
-    padding: initial;
+   
     border: initial;
 }
 
@@ -54,4 +54,11 @@ input[type="checkbox" ] {
 }
 .green_p{
     background-color: cadetblue;
+}
+
+.lable_filter_p{
+    vertical-align: middle;
+   height: 15px;
+   width: 100%;
+   margin-top: 10%;
 }
