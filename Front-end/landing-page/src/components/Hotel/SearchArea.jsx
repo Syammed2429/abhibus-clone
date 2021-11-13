@@ -50,7 +50,7 @@ function SearchArea() {
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹2829</p>
                             </div>
-                            <button>Book Now</button>
+                            {/* <button>Book Now</button> */}
                         </div>
                     </div>
                     <div className="cities">
@@ -61,7 +61,7 @@ function SearchArea() {
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹607</p>
                             </div>
-                            <button>Book Now</button>
+                            {/* <button>Book Now</button> */}
                         </div>
                     </div>
                     <div className="cities">
@@ -72,7 +72,7 @@ function SearchArea() {
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹350</p>
                             </div>
-                            <button>Book Now</button>
+                            {/* <button>Book Now</button> */}
                         </div>
                     </div>
 

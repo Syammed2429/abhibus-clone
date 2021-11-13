@@ -9,7 +9,7 @@ const Links = () => {
             {/* 1st */}
             <div className="text-center">
               <div>
-                <img
+                <img className="sumit-image-s"
                   src="https://www.abhibus.com/trains/images/pnr-status-icon.png"
                   alt="img"
                 />
@@ -20,6 +20,7 @@ const Links = () => {
             <div className="text-center">
               <div>
                 <img
+                  className="sumit-image-s"
                   src="https://www.abhibus.com/trains/images/coach-icon.png"
                   alt="img"
                 />
@@ -30,6 +31,7 @@ const Links = () => {
             <div className="text-center">
               <div>
                 <img
+                  className="sumit-image-s"
                   src="https://www.abhibus.com/trains/images/route-icon.png"
                   alt="img"
                 />
@@ -40,6 +42,7 @@ const Links = () => {
             <div className="text-center">
               <div>
                 <img
+                  className="sumit-image-s"
                   src="https://www.abhibus.com/trains/images/train-icon.png"
                   alt="img"
                 />
@@ -49,6 +52,7 @@ const Links = () => {
           </div>
           <div>
             <img
+              className="sumit-image-s"
               src="https://static.abhibus.com/trains/trains-right-banner.jpg"
               alt="images"
             />

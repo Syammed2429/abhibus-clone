@@ -1,85 +1,84 @@
-import { useState,useEffect } from "react"
-import { useLocation,useHistory } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { useLocation, useHistory } from "react-router-dom";
 import "../Payment.css"
 import axios from "axios";
-import {Footer} from "../Footer";
+import { Footer } from "../Footer";
 
-function Pay ({type,checkin,checkout,guest,id}){
+function PayBus({ type, checkin, checkout, guest, id }) {
     const location = useLocation();
-    const [price,setPrice]= useState(0);
-   
-    const [discountedPrice,setDiscountedPrice] =useState(0);
-    const [stop,setStop]=useState(false);
-    checkin=location.state.checkin;
-    checkout= location.state.checkout;
-    useEffect( ()=>{
-        try{
-          
-         
-      }catch(e){
-        console.log(e)
-      }
-      finally{
-      console.log("finally")
-      setStop(true)
-      }
-      
-    },[stop]);
+    const [price, setPrice] = useState(0);
+
+    const [discountedPrice, setDiscountedPrice] = useState(0);
+    const [stop, setStop] = useState(false);
+    // checkin = location.state.checkin;
+    // checkout = location.state.checkout;
+    useEffect(() => {
+        try {
+
+
+        } catch (e) {
+            console.log(e)
+        }
+        finally {
+            console.log("finally")
+            setStop(true)
+        }
+
+    }, [stop]);
     const history = useHistory();
-    const redirect=()=>{
+    const redirect = () => {
         alert(` Your Booking is confirm .
                 Thank You for using ABHIBUS 
                 Happy and safe Journey `);
 
-           
-            history.push("/")    
-    }
-  
-    const [guestName,setGuestName] = useState("Priya");
-    const [email,setEmail] = useState("priyakumarigupta@gmail.com");
-    const [mobile,setMobile] = useState(9102330360);
-    const [applyCoupon,setApplyCoupon] = useState(false);
-    const [couponCode,setCoupoCode] =useState("");
-    const [invalid,setInvalid] =useState(false);
-   
-    const [name,setName]=useState("");
-    const [cvv,setcvv]=useState("");
-    const [month,setMonth]=useState("");
-    const [Year,setYear]=useState("");
-    const [number,setNumber]=useState("");
-   
-    const handlecoupon=()=>{
-       // setDiscountedPrice(price)
-        if(couponCode==="SIMPLNOV" && applyCoupon ==true)
-        {
-            let total = price-150;
-            setDiscountedPrice(total);
-           
 
-        }else if(couponCode==="ABHI500" && applyCoupon ==true){
-            let total = price-500;
+        history.push("/")
+    }
+
+    const [guestName, setGuestName] = useState("Priya");
+    const [email, setEmail] = useState("priyakumarigupta@gmail.com");
+    const [mobile, setMobile] = useState(9102330360);
+    const [applyCoupon, setApplyCoupon] = useState(false);
+    const [couponCode, setCoupoCode] = useState("");
+    const [invalid, setInvalid] = useState(false);
+
+    const [name, setName] = useState("");
+    const [cvv, setcvv] = useState("");
+    const [month, setMonth] = useState("");
+    const [Year, setYear] = useState("");
+    const [number, setNumber] = useState("");
+
+    const handlecoupon = () => {
+        // setDiscountedPrice(price)
+        if (couponCode === "SIMPLNOV" && applyCoupon == true) {
+            let total = price - 150;
+            setDiscountedPrice(total);
+
+
+        } else if (couponCode === "ABHI500" && applyCoupon == true) {
+            let total = price - 500;
             setDiscountedPrice(total);
         }
-        else if(applyCoupon===false){
-            
+        else if (applyCoupon === false) {
+
             setDiscountedPrice(price)
-        }else{
-           setInvalid(true);
-           setCoupoCode(" ")
+        } else {
+            setInvalid(true);
+            setCoupoCode(" ")
         }
         setTimeout(() => {
             invalid_set();
-          
+
         }, 1000);
     }
-    const invalid_set=()=>{
+    const invalid_set = () => {
         setInvalid(false)
     }
-  
+
     return (
         <div>
             <h2 className="margin">
-            Booking Confirmation Details & Payment
+                Booking Confirmation Details & Payment
             </h2>
             <div className="flex margin">
                 <div className="WID_P" >
@@ -87,60 +86,60 @@ function Pay ({type,checkin,checkout,guest,id}){
                         <h4>Confirm your primary Guest information</h4>
                         <p>(Booking details will be sent to your email address and contact no. )</p>
                         <div className="flex">
-                            <div  className="inp_p">
-                             <lable>Name:</lable>
-                             <br/>
-                             <input 
-                             className="inp_p inp_mob_p input_p input"
-                             type="text" 
-                             value={guestName} 
-                             onChange={(e)=>{
-                                 setGuestName(e.target.value)
-                             }}  />
+                            <div className="inp_p">
+                                <lable>Name:</lable>
+                                <br />
+                                <input
+                                    className="inp_p inp_mob_p input_p input"
+                                    type="text"
+                                    value={guestName}
+                                    onChange={(e) => {
+                                        setGuestName(e.target.value)
+                                    }} />
                             </div>
-                            <div  className="inp_p">
-                             <lable>Email:</lable>
-                             <br/>
-                             <input 
-                             className="inp_p inp_mob_p input_p input"
-                             type="email" 
-                             value={email} 
-                             onChange={(e)=>{
-                                 setEmail(e.target.value)
-                             }}  />
+                            <div className="inp_p">
+                                <lable>Email:</lable>
+                                <br />
+                                <input
+                                    className="inp_p inp_mob_p input_p input"
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => {
+                                        setEmail(e.target.value)
+                                    }} />
                             </div>
-                            <div  className="inp_p ">
-                             <lable>Mobile No.:</lable>
-                             <br/>
-                             <input 
-                             className="inp_p inp_mob_p input_p input"
-                             type="number" 
-                             value={mobile} 
-                             onChange={(e)=>{
-                                 setMobile(e.target.value)
-                             }}  />
+                            <div className="inp_p ">
+                                <lable>Mobile No.:</lable>
+                                <br />
+                                <input
+                                    className="inp_p inp_mob_p input_p input"
+                                    type="number"
+                                    value={mobile}
+                                    onChange={(e) => {
+                                        setMobile(e.target.value)
+                                    }} />
                             </div>
                         </div>
 
                     </div>
                     <div>
                         <div className="btn-back flex coupon flex_det_p">
-                            <input className="input_p input" type="checkbox" onChange={(e)=>{
-                                    setApplyCoupon(e.target.checked);
-                                    console.log(applyCoupon)
-                            }} /> 
+                            <input className="input_p input" type="checkbox" onChange={(e) => {
+                                setApplyCoupon(e.target.checked);
+                                console.log(applyCoupon)
+                            }} />
                             <lable className="lable_pay_p">I have a coupon code (optional but useful)</lable>
 
-                                  {applyCoupon&& <div className="flex">
-                                  <input className="input_p input coupon_inp_p" type="text" onChange={(e)=>{
+                            {applyCoupon && <div className="flex">
+                                <input className="input_p input coupon_inp_p" type="text" onChange={(e) => {
                                     setCoupoCode(e.target.value);
-                                  }} /> 
-                                  <button className="coupon-button button_p" onClick={handlecoupon}>Apply</button>
-                                 <br/>
-                                 
-                                </div>
-                              }
-                              
+                                }} />
+                                <button className="coupon-button button_p" onClick={handlecoupon}>Apply</button>
+                                <br />
+
+                            </div>
+                            }
+
 
                         </div>
                         {invalid && <p className="red">Invalid Promo code</p>}
@@ -149,19 +148,19 @@ function Pay ({type,checkin,checkout,guest,id}){
                             <div className="margin">
                                 <h3>Enter your Credit card details</h3>
                                 <lable>Credit Card No. :</lable>
-                                <input className="input_p input" type= "number" placeholder="Credit card Number" onChange={(e)=>{
-                                   setNumber(e.target.value);
-                                }}/>
-                                <br/>
-                                <br/>
-                               
+                                <input className="input_p input" type="number" placeholder="Credit card Number" onChange={(e) => {
+                                    setNumber(e.target.value);
+                                }} />
+                                <br />
+                                <br />
+
                                 <lable>Expiry Date :</lable>
-                                <select className="input_p input" onChange={(e)=>{
-                                   setMonth(e.target.value);
+                                <select className="input_p input" onChange={(e) => {
+                                    setMonth(e.target.value);
                                 }}>
                                     <option>Month</option>
                                     <option>01</option>
-                                    <option>02</option> 
+                                    <option>02</option>
                                     <option>03</option>
                                     <option>04</option>
                                     <option>05</option>
@@ -173,12 +172,12 @@ function Pay ({type,checkin,checkout,guest,id}){
                                     <option>11</option>
                                     <option>12</option>
                                 </select>
-                                <select className="input_p input" onChange={(e)=>{
-                                  setYear ( e.target.value);
+                                <select className="input_p input" onChange={(e) => {
+                                    setYear(e.target.value);
                                 }}>
                                     <option>Year</option>
                                     <option>2021</option>
-                                    <option>2022</option> 
+                                    <option>2022</option>
                                     <option>2023</option>
                                     <option>2024</option>
                                     <option>2025</option>
@@ -208,38 +207,38 @@ function Pay ({type,checkin,checkout,guest,id}){
                                     <option>2049</option>
                                     <option>2050</option>
                                 </select>
-                                <br/>
-                                <br/>
-                           
+                                <br />
+                                <br />
+
                                 <lable>CVV :</lable>
-                                <input className="input_p input" type= "password" onChange={(e)=>{
+                                <input className="input_p input" type="password" onChange={(e) => {
                                     setcvv(e.target.value);
                                 }} />
-                                <br/>
-                                <br/>
-                              
+                                <br />
+                                <br />
+
                                 <lable>Name on the Card :</lable>
-                                <input className="input_p input" type= "text" onChange={(e)=>{
-                                   setName(e.target.value);
+                                <input className="input_p input" type="text" onChange={(e) => {
+                                    setName(e.target.value);
                                 }} />
-                                <br/>
-                                <br/>
-                               
-                                
+                                <br />
+                                <br />
+
+
                             </div>
-                            <div  className="btn-back">
+                            <div className="btn-back">
                                 <button className="button_p" onClick={redirect}>Make Payment</button>
                             </div>
                         </div>
                     </div>
                 </div>
-           
-                 
+
+
             </div>
-           
+
             <Footer />
         </div>
     )
 }
 
-export default Pay
+export default PayBus

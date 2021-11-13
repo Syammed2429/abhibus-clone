@@ -19,3 +19,7 @@
 img {
   width: 20%;
 }
+.sumit-image-s {
+  height: fit-content !important;
+  width: auto !important;
+}
