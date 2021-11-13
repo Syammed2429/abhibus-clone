@@ -9,10 +9,12 @@
     "axios": "^0.24.0",
     "imports-loader": "^3.1.1",
     "react": "^17.0.2",
+    "react-datepicker": "^4.3.0",
     "react-dom": "^17.0.2",
     "react-flickity-component": "^3.2.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-text-truncate": "^0.17.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

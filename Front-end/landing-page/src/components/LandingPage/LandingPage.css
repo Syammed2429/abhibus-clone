@@ -2,7 +2,7 @@ header {
   background: #efefef;
   color: #444444;
   border-bottom: 1px solid #ccc;
-  font-size: 15px;
+  /* font-size: 20px; */
 }
 
 .main {
@@ -12,7 +12,8 @@ header {
   color: #212529;
 }
 .logo {
-  height: 55px;
+  width: 90px !important;
+  height: 55px !important;
 }
 
 header,
@@ -20,10 +21,13 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  /* top : 50%; */
 }
 
 li {
+  font-size: 18px !important;
+  position: relative;
+  width: 100%;
   margin-left: 40px;
-  /* padding: 15px; */
-  /* margin-left: 15px; */
+  padding: 15px;
 }

@@ -1,0 +1,57 @@
+
+.thumbnail{
+    height: 200px;
+    width: 200px;
+}
+.suggestion-width{
+    width: 150%;
+    border:  1px solid lightslategray;
+    justify-content: space-between;
+}
+
+.teal_p{
+    background-color: #efefef;
+    height: 30px;
+}.right_p{
+    float: right;
+}
+.filter_p{
+    border: 1px solid lightslategray;
+    text-align: left !important;
+    width: 150%;
+}
+.filter_p_h3{
+   
+    text-align: center !important;
+    margin: 1%;
+    margin-bottom: 0%;
+}
+.filter_p_button{
+    align-self: center;
+    margin:5% 30% !important;
+}
+
+input[type="checkbox" ] {
+    background-color: initial;
+    cursor: default;
+    
+    box-sizing: border-box;
+    color: lightslategray !important;
+    padding: initial;
+    border: initial;
+}
+
+.btn-margin_p{
+    margin: 5%;
+}
+.btn-margin_p>button{
+    margin-top: 5%;
+    width: 150%;
+}
+.p_p{
+   
+    margin-top:2.2% ;
+}
+.green_p{
+    background-color: cadetblue;
+}

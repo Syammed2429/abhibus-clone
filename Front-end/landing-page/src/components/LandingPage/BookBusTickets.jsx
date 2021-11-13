@@ -1,9 +1,7 @@
-// import axios from 'axios';
 import React from 'react';
-import { useHistory,useLocation } from "react-router-dom";
-import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
+import { useHistory, Link } from "react-router-dom";
+// import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
 // import { useNavigate, createSearchParams } from "react-router-dom";
-// import { Test } from './Test';
 
 
 
@@ -11,27 +9,7 @@ import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
 const BookBusTickets = () => {
 
     // const navigate = useNavigate();
-   let history = useHistory();
-    let location = useLocation();
-    const [busData, setBusData] = React.useState([]);
-
-    // React.useEffect(() => {
-    //     console.log("Ogg", busData)
-
-    // }, [busData])
-
-    // const getData = async (from, to) => {
-    //     const { data } = await axios.get("http://localhost:2924/bus", {
-    //         params: {
-    //             from: from,
-    //             to: to
-    //         }
-    //     })
-    //     // return setBusData(data)
-    //     console.log('data:', data)
-    //     return data;
-
-    // }
+    const history = useHistory();
 
 
 
@@ -51,40 +29,20 @@ const BookBusTickets = () => {
             [name]: value,
         })
     }
-    // const fun = async () => {
-    //     let datass = await getData(formData.leaving, formData.going);
-    //     console.log('datass:', datass)
-    //     // setBusData(datass)
-    //     history.push({
-    //         pathname: "/bus-details",
-    //         state: {
-    //             leaving: datass.busName,
-    //             // price: busData.price
 
-    //         }
-    //     });
-
-
-    // }
 
     // handleSubmit function
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormDetails([...formDetails, formData])
-        // setFormData("")
-        // getData(formData.leaving, formData.going);
-        // fun()
         history.push({
             pathname: "/bus-details",
             state: {
                 leaving: formData.leaving,
                 going: formData.going
-               
-                // price: busData.price
-
             }
         });
-        //console.log(busData);
+        // console.log(busData);
         // navigate({
         //     pathname: "/bus-details",
         //     search: `?${createSearchParams({
@@ -98,24 +56,24 @@ const BookBusTickets = () => {
 
     return (
         <>
-            <div className="text-center border border-danger bg-danger">
-                <h2 className="my-4 text-white">Book Bus Tickets</h2>
+            <div className="bg-danger">
+                <h2 className="my-4 text-center text-white">Book Bus Tickets</h2>
 
                 {/*Booking Buttons Start */}
 
-                <div className="my-4">
+                <div className="my-4 text-center">
                     <button
-                        className="btn bg-white border border-primary rounded-pill"
+                        className="border border-rounded rounded-pill col-1 h5"
                     >Bus</button>
-                    <button
-                        className="btn bg-white border border-primary rounded-pill"
+                    <Link to="/book-train-tickets"><button
+                        className="border border-primary bg-white text-black h5 rounded-pill col-1"
 
-                    >Trains</button>
+                    >Trains</button></Link>
                     <button
-                        className="btn bg-white border border-primary rounded-pill"
+                        className="border border-primary bg-white text-black h5 rounded-pill col-1"
                     >Hotels</button>
                     <button
-                        className="btn bg-white border border-primary rounded-pill"
+                        className="border border-primary bg-white text-black h5 rounded-pill col-1"
                     >Rentals </button>
                 </div>
                 {/*Booking Buttons End */}
@@ -123,6 +81,7 @@ const BookBusTickets = () => {
                 {/* Search Box starts */}
                 <div>
                     <form
+                        className="d-flex container"
                         onSubmit={handleSubmit}
                     >
 
@@ -143,6 +102,7 @@ const BookBusTickets = () => {
                             type="date"
                             placeholder="Date of Journey" />
                         <input
+
                             onChange={handleChange}
                             name="dateOfReturn"
                             type="date"
@@ -153,12 +113,6 @@ const BookBusTickets = () => {
                             value="Search" />
                     </form>
                 </div>
-                {/* {console.log("Bus data from boottom", busData)} */}
-                {/* Search Box ends */}
-
-
-                {/* <Test busData={formDetails} /> */}
-                {/* <DisplayBusDetails busData={formData} /> */}
 
             </div>
         </>
