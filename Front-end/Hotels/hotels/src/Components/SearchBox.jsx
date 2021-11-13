@@ -6,7 +6,7 @@ import ShowHotel from "./ShowHotels";
 import { Switch,Route , Link , useHistory } from "react-router-dom";
 
 function SearchBox(){
-    const [city,setCity] = useState("Pune");
+    const [city,setCity] = useState("");
     const [checkin,setCheckin] = useState(new Date());
     const [checkout,setCheckout]=useState(new Date());
     const [show,setShow]= useState(false)
@@ -15,22 +15,27 @@ function SearchBox(){
 
     const handlesubmit = (e)=>{
        // console.log("city",city,checkin,checkout,guest)
-       setShow(true);
-       history.push({
-            pathname:"/showHotels",
-            state: { city: city,
-            checkin:checkin,
-        checkout:checkout,
-    guest:guest }
-        });
+        if(city==""){
+            alert("Please Enter City")
+        }else{
+            setShow(true);
+            history.push({
+                 pathname:"/showHotels",
+                 state: { city: city,
+                 checkin:checkin,
+             checkout:checkout,
+         guest:guest }
+             });
+        }
+      
     }
     return (
 
         <div className="flex">
             <div className="border border_start">
             <div className="floating-label-group">
-                <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdtkWGReHSyMejXT_WTXa2ipCUJj5DfqhVSIfY-_-sBXY9cqi-ducWorRKOpNBifTDM14&usqp=CAU" alt="icon"/>
-			<input type="text" className="form-control" name="city" onChange={(e)=>{setCity(e.target.value)}} autoComplete="off" required />
+                <img className="icon " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdtkWGReHSyMejXT_WTXa2ipCUJj5DfqhVSIfY-_-sBXY9cqi-ducWorRKOpNBifTDM14&usqp=CAU" alt="icon"/>
+			<input type="text" className="form-control input" name="city" onChange={(e)=>{setCity(e.target.value)}} autoComplete="off" required />
 			<label className="floating-label">Search By City,Hotel or Area</label>
 			</div>
            </div>
@@ -39,7 +44,7 @@ function SearchBox(){
             <div className="floating-label-group">
             <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmGZcO1ksv2HDnWZCe8dZcYA8MFNNGCeX6LEfGdXlJ50op3pMvKLedXuy9bc5S_r8oUg&usqp=CAU" alt="icon"/>
             <label className="floating-label2">Check In</label>
-            <DatePicker className="color" selected={checkin} onChange={(date) => setCheckin(date)} />
+            <DatePicker className="color input" selected={checkin} onChange={(date) => setCheckin(date)} />
 
 			</div>
            </div>
@@ -49,7 +54,7 @@ function SearchBox(){
 
             <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmGZcO1ksv2HDnWZCe8dZcYA8MFNNGCeX6LEfGdXlJ50op3pMvKLedXuy9bc5S_r8oUg&usqp=CAU" alt="icon"/>
             <label className="floating-label2">Check Out</label>
-			<DatePicker className="color" selected={checkout} onChange={(date) => setCheckout(date)} />
+			<DatePicker className="color input" selected={checkout} onChange={(date) => setCheckout(date)} />
 
 			</div>
            </div>
@@ -57,13 +62,13 @@ function SearchBox(){
            <div className="border">
             <div className="floating-label-group">
             <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxwi3UjTtpRPBEvJKLBtlndABG88b7nCsReXzJkrddFO9-TcWBHUAv6f6vQBqKDsBsak&usqp=CAU" alt="icon"/>
-			<input type="text" className="form-control" name="guest" onChange={(e)=>{setGuest(e.target.value)}} autoComplete="off" required />
+			<input type="text" className="form-control input" name="guest" onChange={(e)=>{setGuest(e.target.value)}} autoComplete="off" required />
 			<label className="floating-label">1 Adult,0 Children,1 Room</label>
 			</div>
            </div>
 
           
-            <button className="button_search" onClick={handlesubmit}>Search</button> 
+            <button className="button_search button_p" onClick={handlesubmit}>Search</button> 
 
         </div>
     )

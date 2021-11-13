@@ -169,7 +169,7 @@ ul{
     padding: 0;
     height: 15px;
 }
-button{
+.button_p{
     background-color: #c60001;
     color: white;
     border: none;

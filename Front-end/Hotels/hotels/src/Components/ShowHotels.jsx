@@ -145,11 +145,13 @@ function ShowHotel({city,checkin,checkout,guest}){
                         <input name="ac"
                          type="checkbox"
                           value="ac" 
-                          onChange= {(e)=>{setAC(e.target.checked)}}/> <lable className="lable_filter_p lable_hotel_p">A.C</lable>
+
+                          onChange= {(e)=>{setAC(e.target.checked)}}/> <lable className="lable_filter_p  input lable_hotel_p">A.C</lable>
                          <br/>
                          </div>
                          <div className="flex_ShowRoom_p">
                         <input 
+                        className="input"
                         type="checkbox" 
                         value="wifi" 
                         onChange= {(e)=>{setWifi(e.target.checked)}} />
@@ -157,6 +159,7 @@ function ShowHotel({city,checkin,checkout,guest}){
                         </div>
                         <div className="flex_ShowRoom_p">
                         <input 
+                        className="input"
                         type="checkbox" 
                         value="front_desk" 
                         onChange= {(e)=>{setFront_Desk(e.target.checked)}}/>
@@ -164,18 +167,21 @@ function ShowHotel({city,checkin,checkout,guest}){
                         <br/></div> 
                         <div className="flex_ShowRoom_p">
                         <input 
+                         className="input"
                         type="checkbox" 
                         value="breakfast" 
                         onChange= {(e)=>{setBreakfast(e.target.checked)}}/><lable className="lable_filter_p lable_hotel_p"> BreakFast</lable>  <br/>
                         </div>
                         <div className="flex_ShowRoom_p">
                         <input 
+                         className="input"
                         type="checkbox" 
                         value="restaurent" 
                         onChange= {(e)=>{setRestaurent(e.target.checked)}}/><lable className="lable_filter_p lable_hotel_p"> Restaurent </lable> <br/>
                             </div>
                             <div className="flex_ShowRoom_p">
                         <input 
+                         className="input"
                         type="checkbox" 
                         value="Laundry" 
                         onChange= {(e)=>{setLaundry(e.target.checked)}}/>
@@ -183,7 +189,7 @@ function ShowHotel({city,checkin,checkout,guest}){
                          </div>
 
 
-                        <button className="filter_p_button" onClick={filteredData}>Apply</button>
+                        <button className="filter_p_button button_p" onClick={filteredData}>Apply</button>
                       </div>
                     </div>
                   
@@ -198,7 +204,7 @@ function ShowHotel({city,checkin,checkout,guest}){
                             </div>
                             <div className="btn-margin_p">
                                 <div className="red"> ₹{e.price}</div>
-                                <button onClick={() => { console.log(e._id, "id");
+                                <button className="button_p" onClick={() => { console.log(e._id, "id");
                             move(e._id,checkout,checkin,guest) } }>Reserve</button>
                             </div>
 

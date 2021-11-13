@@ -96,7 +96,7 @@ function ShowRoom(){
                 
                  <div >
                    <p className="red">₹{data.maple_price}</p>
-                    <button onClick={smoothScroll2}>Select Rooms</button>
+                    <button className="button_p" onClick={smoothScroll2}>Select Rooms</button>
                   </div>
                </div>
               <div className="fl-ri_p description_p_h4">
@@ -131,7 +131,7 @@ function ShowRoom(){
                               </div>
                               <div className="btn-margin_p">
                                 <p className="red">₹{data.oak_price}</p>
-                                <button onClick={
+                                <button className="button_p" onClick={
                                   ()=>{
                                     pay("oak",location.state.id,checkin,checkout,location.state.guest)
                                   }
@@ -156,7 +156,7 @@ function ShowRoom(){
                               </div>
                               <div className="btn-margin_p">
                                 <p className="red">₹{data.maple_price}</p>
-                                <button onClick={
+                                <button className="button_p" onClick={
                                   ()=>{
                                     pay("maple",location.state.id,checkin,checkout,location.state.guest)
                                   }

@@ -113,7 +113,7 @@ function Pay ({type,checkin,checkout,guest,id}){
                              <lable>Name:</lable>
                              <br/>
                              <input 
-                             className="inp_p inp_mob_p input_p"
+                             className="inp_p inp_mob_p input_p input"
                              type="text" 
                              value={guestName} 
                              onChange={(e)=>{
@@ -124,7 +124,7 @@ function Pay ({type,checkin,checkout,guest,id}){
                              <lable>Email:</lable>
                              <br/>
                              <input 
-                             className="inp_p inp_mob_p input_p"
+                             className="inp_p inp_mob_p input_p input"
                              type="email" 
                              value={email} 
                              onChange={(e)=>{
@@ -135,7 +135,7 @@ function Pay ({type,checkin,checkout,guest,id}){
                              <lable>Mobile No.:</lable>
                              <br/>
                              <input 
-                             className="inp_p inp_mob_p input_p"
+                             className="inp_p inp_mob_p input_p input"
                              type="number" 
                              value={mobile} 
                              onChange={(e)=>{
@@ -147,17 +147,17 @@ function Pay ({type,checkin,checkout,guest,id}){
                     </div>
                     <div>
                         <div className="btn-back flex coupon flex_det_p">
-                            <input className="input_p" type="checkbox" onChange={(e)=>{
+                            <input className="input_p input" type="checkbox" onChange={(e)=>{
                                     setApplyCoupon(e.target.checked);
                                     console.log(applyCoupon)
                             }} /> 
                             <lable className="lable_pay_p">I have a coupon code (optional but useful)</lable>
 
                                   {applyCoupon&& <div className="flex">
-                                  <input className="input_p coupon_inp_p" type="text" onChange={(e)=>{
+                                  <input className="input_p input coupon_inp_p" type="text" onChange={(e)=>{
                                     setCoupoCode(e.target.value);
                                   }} /> 
-                                  <button className="coupon-button" onClick={handlecoupon}>Apply</button>
+                                  <button className="coupon-button button_p" onClick={handlecoupon}>Apply</button>
                                  <br/>
                                  
                                 </div>
@@ -171,14 +171,14 @@ function Pay ({type,checkin,checkout,guest,id}){
                             <div className="margin">
                                 <h3>Enter your Credit card details</h3>
                                 <lable>Credit Card No. :</lable>
-                                <input className="input_p" type= "number" placeholder="Credit card Number" onChange={(e)=>{
+                                <input className="input_p input" type= "number" placeholder="Credit card Number" onChange={(e)=>{
                                    setNumber(e.target.value);
                                 }}/>
                                 <br/>
                                 <br/>
                                
                                 <lable>Expiry Date :</lable>
-                                <select className="input_p" onChange={(e)=>{
+                                <select className="input_p input" onChange={(e)=>{
                                    setMonth(e.target.value);
                                 }}>
                                     <option>Month</option>
@@ -195,7 +195,7 @@ function Pay ({type,checkin,checkout,guest,id}){
                                     <option>11</option>
                                     <option>12</option>
                                 </select>
-                                <select className="input_p" onChange={(e)=>{
+                                <select className="input_p input" onChange={(e)=>{
                                   setYear ( e.target.value);
                                 }}>
                                     <option>Year</option>
@@ -234,14 +234,14 @@ function Pay ({type,checkin,checkout,guest,id}){
                                 <br/>
                            
                                 <lable>CVV :</lable>
-                                <input className="input_p" type= "password" onChange={(e)=>{
+                                <input className="input_p input" type= "password" onChange={(e)=>{
                                     setcvv(e.target.value);
                                 }} />
                                 <br/>
                                 <br/>
                               
                                 <lable>Name on the Card :</lable>
-                                <input className="input_p" type= "text" onChange={(e)=>{
+                                <input className="input_p input" type= "text" onChange={(e)=>{
                                    setName(e.target.value);
                                 }} />
                                 <br/>
@@ -250,7 +250,7 @@ function Pay ({type,checkin,checkout,guest,id}){
                                 
                             </div>
                             <div  className="btn-back">
-                                <button onClick={redirect}>Make Payment</button>
+                                <button className="button_p" onClick={redirect}>Make Payment</button>
                             </div>
                         </div>
                     </div>
