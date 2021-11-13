@@ -1,0 +1,8 @@
+.alleasypays-s{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 2%;
+}
+.padding-left-second-s{
+    padding: 0px 150px;
+}
