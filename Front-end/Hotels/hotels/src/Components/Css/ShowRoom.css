@@ -2,11 +2,10 @@
     display: flex;
 }
 .show{
-    width: 150%;
+    width: 147%;
     height: 150%;
-    margin: 5%;
-    margin-right: -4%;
-    
+    margin: 3.7%;
+    margin-top: 0%;
 }
 .show>img{
     height: 50%;
@@ -25,7 +24,7 @@
     width: 100%;
 }
 .width_header_p{
-    width: 600px;
+    width: 50%;
 }
 .width_header_p_img{
     width: 100%;
@@ -42,8 +41,8 @@
 .short-box{
     width: 100%;
     border: 1px solid darkgray;
-    margin:  5%;
-    margin-right: 2%;
+    margin:  1%;
+    margin-right: 0%;
     height: 200px;
    text-align: left;
 }
@@ -53,19 +52,24 @@
       text-align: start;
       margin-top:8%;
 }
+.h4_room_p{
+    margin-left: 4%;
+}
 .special-li{
   
     text-align: start;
 }
 .special-li>li{
-   margin: 7%;
+  
  
    list-style-type: disc;
 }
 body{
     font-size: 14px;
 }
-
+.short_div_p{
+    width: 50%;
+}
 .description_p{
     width: 90%;
     margin: 2%;
@@ -76,9 +80,14 @@ body{
    text-align: left;
 }
 .cancellation_div_p{
-    height: 900px;
+    height: 450px;
+    margin: 2%;
 }
 .margin_room_type_p{
     margin-left: 10%;
     text-align: center;
+}
+.sugg_img{
+    height: 65%;
+    width: 100%;
 }
