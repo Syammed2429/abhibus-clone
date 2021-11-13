@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
-import { useHistory } from "react-router-dom";
-import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
+import { useHistory, Link } from "react-router-dom";
+// import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
 // import { useNavigate, createSearchParams } from "react-router-dom";
 // import { Test } from './Test';
 
@@ -13,7 +13,7 @@ const BookBusTickets = () => {
     // const navigate = useNavigate();
     const history = useHistory();
 
-    const [busData, setBusData] = React.useState([]);
+    // const [busData, setBusData] = React.useState([]);
 
     // React.useEffect(() => {
     //     console.log("Ogg", busData)
@@ -83,7 +83,7 @@ const BookBusTickets = () => {
 
             }
         });
-        console.log(busData);
+        // console.log(busData);
         // navigate({
         //     pathname: "/bus-details",
         //     search: `?${createSearchParams({
@@ -106,10 +106,10 @@ const BookBusTickets = () => {
                     <button
                         className="btn bg-white border border-primary rounded-pill"
                     >Bus</button>
-                    <button
+                    <Link to="/book-train-tickets"><button
                         className="btn bg-white border border-primary rounded-pill"
 
-                    >Trains</button>
+                    >Trains</button></Link>
                     <button
                         className="btn bg-white border border-primary rounded-pill"
                     >Hotels</button>
@@ -160,6 +160,9 @@ const BookBusTickets = () => {
                 {/* <DisplayBusDetails busData={formData} /> */}
 
             </div>
+            <h1>HGello</h1>
+            {/* <ShowHotel /> */}
+            {/* <Hotels /> */}
         </>
     );
 }

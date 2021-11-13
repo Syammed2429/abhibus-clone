@@ -9,6 +9,7 @@ import logo from './images/logo.png'
 import { Info } from './Info';
 import './LandingPage.css'
 import { Offers } from './Offers';
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -16,8 +17,13 @@ const NavBar = () => {
         <>
             <div className="main">
                 <header>
-                    <img className="logo" src={logo} alt="logo" />
+                    <Link to="/">
+                        <img className="logo" src={logo} alt="logo" /></Link>
                     <ul>
+
+                        <Link to=""><li>Bus</li></Link>
+                        <Link to="/book-train-tickets"><li>Trains</li></Link>
+                        <Link to="/hotels"><li>Hotels</li></Link>
                         <li>Offers</li>
                         <li>Get Free Rides</li>
                         <li>My Bookings</li>

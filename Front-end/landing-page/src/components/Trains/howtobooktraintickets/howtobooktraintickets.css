@@ -1,0 +1,14 @@
+.border-show-s{
+    border: 1px solid rgb(219, 219, 219);
+}
+.inner-howtotrain-s{
+    display: grid;
+    grid-template-columns: 58% 40%;
+    grid-gap: auto;
+}
+li{
+    color: #212529;
+    font-size:14px;
+    font-family: "Open Sans" sans-serif !important;
+    line-height:25px;
+}

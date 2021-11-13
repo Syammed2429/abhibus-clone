@@ -4,7 +4,7 @@ import axios from 'axios';
 // import { useLocation } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { NavBar2 } from '../NavBar2';
-
+// import { Footer } from '../Footer'
 
 const DisplayBusDetails = () => {
     const location = useLocation();
@@ -53,6 +53,7 @@ const DisplayBusDetails = () => {
 
                 </div>
             </div>
+            {/* <Footer /> */}
         </>
     );
 }
