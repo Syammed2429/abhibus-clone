@@ -1,19 +1,17 @@
 // import { Switch, Route, Link } from "react-router-dom";
-import { Switch, Route } from "react-router-dom";
+import { Switch,Route , Link } from "react-router-dom";
 import { DisplayBusDetails } from "./components/LandingPage/DisplayBusData/DisplayBusData";
 import { NavBar } from './components/LandingPage/NavBar';
-
+import Pay from "./components/LandingPage/DisplayBusData/PayBus"
 function App() {
   return (
     <div>
-      {/* <Routes>
-        <Route path="/" element={<NavBar />} />
-        <Route path="/bus-details" element={<DisplayBusDetails />} />
-      </Routes> */}
-      <Switch>
-        <Route path="/bus-details" component={DisplayBusDetails} />
-        <Route path="/" component={NavBar} />
-      </Switch>
+     
+    
+        <Route exact path="/bus-details" component={DisplayBusDetails} />
+        <Route exact path="/" component={NavBar} />
+        <Route exact path="/pay-bus" component={Pay} />
+
 
     </div>
   );

@@ -1,6 +1,6 @@
 // import axios from 'axios';
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory,useLocation } from "react-router-dom";
 import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
 // import { useNavigate, createSearchParams } from "react-router-dom";
 // import { Test } from './Test';
@@ -11,8 +11,8 @@ import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
 const BookBusTickets = () => {
 
     // const navigate = useNavigate();
-    const history = useHistory();
-
+   let history = useHistory();
+    let location = useLocation();
     const [busData, setBusData] = React.useState([]);
 
     // React.useEffect(() => {
@@ -79,11 +79,12 @@ const BookBusTickets = () => {
             state: {
                 leaving: formData.leaving,
                 going: formData.going
+               
                 // price: busData.price
 
             }
         });
-        console.log(busData);
+        //console.log(busData);
         // navigate({
         //     pathname: "/bus-details",
         //     search: `?${createSearchParams({
