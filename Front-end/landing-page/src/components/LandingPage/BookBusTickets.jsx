@@ -1,33 +1,37 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
-import { useNavigate, createSearchParams } from "react-router-dom";
-import { Test } from './Test';
+import { useHistory } from "react-router-dom";
+import { DisplayBusDetails } from './DisplayBusData/DisplayBusData';
+// import { useNavigate, createSearchParams } from "react-router-dom";
+// import { Test } from './Test';
 
 
 
 
 const BookBusTickets = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+    const history = useHistory();
 
     const [busData, setBusData] = React.useState([]);
 
-    React.useEffect(() => {
-        console.log("Ogg", busData)
+    // React.useEffect(() => {
+    //     console.log("Ogg", busData)
 
-    }, [])
+    // }, [busData])
 
-    const getData = async (from, to) => {
-        const { data } = await axios.get("http://localhost:2924/bus", {
-            params: {
-                from: from,
-                to: to
-            }
-        })
-        setBusData(data)
-        console.log('data:', data)
+    // const getData = async (from, to) => {
+    //     const { data } = await axios.get("http://localhost:2924/bus", {
+    //         params: {
+    //             from: from,
+    //             to: to
+    //         }
+    //     })
+    //     // return setBusData(data)
+    //     console.log('data:', data)
+    //     return data;
 
-    }
+    // }
 
 
 
@@ -47,22 +51,45 @@ const BookBusTickets = () => {
             [name]: value,
         })
     }
+    // const fun = async () => {
+    //     let datass = await getData(formData.leaving, formData.going);
+    //     console.log('datass:', datass)
+    //     // setBusData(datass)
+    //     history.push({
+    //         pathname: "/bus-details",
+    //         state: {
+    //             leaving: datass.busName,
+    //             // price: busData.price
+
+    //         }
+    //     });
 
 
-
+    // }
 
     // handleSubmit function
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormDetails([...formDetails, formData])
         // setFormData("")
-        getData(formData.leaving, formData.going);
-        navigate({
+        // getData(formData.leaving, formData.going);
+        // fun()
+        history.push({
             pathname: "/bus-details",
-            search: `?${createSearchParams({
-                leaving: formData.leaving
-            })}`
-        })
+            state: {
+                leaving: formData.leaving,
+                going: formData.going
+                // price: busData.price
+
+            }
+        });
+        console.log(busData);
+        // navigate({
+        //     pathname: "/bus-details",
+        //     search: `?${createSearchParams({
+        //         leaving: formData.leaving
+        //     })}`
+        // })
 
 
     }
@@ -130,6 +157,7 @@ const BookBusTickets = () => {
 
 
                 {/* <Test busData={formDetails} /> */}
+                {/* <DisplayBusDetails busData={formData} /> */}
 
             </div>
         </>

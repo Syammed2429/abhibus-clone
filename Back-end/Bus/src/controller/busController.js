@@ -9,7 +9,7 @@ router.post("", async (req, res) => {
     return res.status(201).send(bus)
 });
 
-router.get("/?", async (req, res) => {
+router.get("/", async (req, res) => {
     const bus = await Bus.find({ from: req.query.from, to: req.query.to }).lean().exec();
     // console.log('req.params.busName:', req.query.from, )
     // console.log('Bus:', bus)
