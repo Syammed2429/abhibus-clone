@@ -1,15 +1,17 @@
 
-.Footers>ul li::before {
+.Footers_p>ul li::before {
     content: "\2022";
     color: red;
     font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+   
+    width: 3em;
+    margin-left: -4em;
     text-align: left;
 }
-
-.Footers{
+.block_p{
+    display: block;
+}
+.Footers_p{
     color: lightslategrey;
     width: 20%;
     height: fit-content;
@@ -17,16 +19,20 @@
 
 }
 
-.Footers>ul {
-   
-    text-align: left
+.Footers_p_ul {
+    display: block;
+    text-align: left;
+    margin-left: 1%;
  }
-
+ .Footers_p_li {
+   margin: -10%;
+  
+ }
  p{
      text-align: left;
  }
 
-.black{
+.black_p{
     color: black;
     font-size: 16px;
     margin: 1%;

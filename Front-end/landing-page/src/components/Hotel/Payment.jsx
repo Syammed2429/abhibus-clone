@@ -101,15 +101,15 @@ function Pay({ type, checkin, checkout, guest, id }) {
     return (
         <div>
             <NavBar2 />
-            <h2 className="margin">
+            <h2 className="margin_Payment_p">
                 Booking Confirmation Details & Payment
             </h2>
-            <div className="flex margin">
+            <div className="flex_p margin_Payment_p">
                 <div className="WID_P" >
                     <div className="border_div_p ">
                         <h4>Confirm your primary Guest information</h4>
                         <p>(Booking details will be sent to your email address and contact no. )</p>
-                        <div className="flex">
+                        <div className="flex_p">
                             <div className="inp_p">
                                 <lable>Name:</lable>
                                 <br />
@@ -147,18 +147,18 @@ function Pay({ type, checkin, checkout, guest, id }) {
 
                     </div>
                     <div>
-                        <div className="btn-back flex coupon">
-                            <input className="input_p" type="checkbox" onChange={(e) => {
+                        <div className="btn-back_p flex_p coupon_p ">
+                            <input className="input_p payment_justify_undset_p" type="checkbox" onChange={(e) => {
                                 setApplyCoupon(e.target.checked);
                                 console.log(applyCoupon)
                             }} />
                             <lable>I have a coupon code (optional but useful)</lable>
 
-                            {applyCoupon && <div className="flex">
-                                <input className="input_p" type="text" onChange={(e) => {
+                            {applyCoupon && <div className="flex_p">
+                                <input className="input_p border_div_p" type="text" onChange={(e) => {
                                     setCoupoCode(e.target.value);
                                 }} />
-                                <button className="coupon-button" onClick={handlecoupon}>Apply</button>
+                                <button className="coupon-button_p" onClick={handlecoupon}>Apply</button>
                                 <br />
 
                             </div>
@@ -169,12 +169,15 @@ function Pay({ type, checkin, checkout, guest, id }) {
                         {invalid && <p className="red">Invalid Promo code</p>}
                         <div className="card_p">
                             <h2 className="cen_p">Make Payment</h2>
-                            <div className="margin">
+                            <div className="margin_Payment_p">
                                 <h3>Enter your Credit card details</h3>
+                                <div>
                                 <lable>Credit Card No. :</lable>
-                                <input className="input_p" type="number" placeholder="Credit card Number" onChange={(e) => {
+                                <input className="input_p border_div_p card_input_width_payment_p" type="number" placeholder="Credit card Number" onChange={(e) => {
                                     setNumber(e.target.value);
                                 }} />
+                                </div>
+                               
                                 <br />
                                 <br />
 
@@ -233,16 +236,16 @@ function Pay({ type, checkin, checkout, guest, id }) {
                                 </select>
                                 <br />
                                 <br />
-
+                                   
                                 <lable>CVV :</lable>
-                                <input className="input_p" type="password" onChange={(e) => {
+                                <input className="input_p border_div_p card_input_width_payment_p" type="password" onChange={(e) => {
                                     setcvv(e.target.value);
                                 }} />
                                 <br />
                                 <br />
 
                                 <lable>Name on the Card :</lable>
-                                <input className="input_p" type="text" onChange={(e) => {
+                                <input className="input_p border_div_p card_input_width_payment_p" type="text" onChange={(e) => {
                                     setName(e.target.value);
                                 }} />
                                 <br />
@@ -250,8 +253,8 @@ function Pay({ type, checkin, checkout, guest, id }) {
 
 
                             </div>
-                            <div className="btn-back">
-                                <button onClick={redirect}>Make Payment</button>
+                            <div className="btn-back_p">
+                                <button className="border_none_payment_p" onClick={redirect}>Make Payment</button>
                             </div>
                         </div>
                     </div>
@@ -259,15 +262,15 @@ function Pay({ type, checkin, checkout, guest, id }) {
                 <div className="border_div_p WID_P">
 
                     <div>
-                        <img className="pay_thumb" src={data.thumbnail} alt="payment thumbnail" />
+                        <img className="pay_thumb_p" src={data.thumbnail} alt="payment thumbnail" />
                         <p>{data.address}</p>
                     </div>
                     <hr />
                     <div>Room Type : {type}</div>
                     <hr />
                     <div>
-                        <p>Check-In : {location.state.checkin.getDate()}-{location.state.checkin.getMonth()}-{location.state.checkin.getYear()}</p>
-                        <p>Check-out : {location.state.guest.getDate()}-{location.state.guest.getMonth()}-{location.state.guest.getYear()}</p>
+                        <div >Check-In : {location.state.checkin.getDate()}-{location.state.checkin.getMonth()}-{location.state.checkin.getYear()}</div>
+                        <div >Check-out : {location.state.guest.getDate()}-{location.state.guest.getMonth()}-{location.state.guest.getYear()}</div>
                     </div>
                     <hr />
                     <div >Guest : {location.state.type}</div>
@@ -278,7 +281,7 @@ function Pay({ type, checkin, checkout, guest, id }) {
                         Total cost  : ₹{price}
                     </div>
                     <hr />
-                    <div className=" text">
+                    <div className=" text_p">
                         Total Payable : <p className="red ">₹{discountedPrice}</p>
                     </div>
                 </div>

@@ -8,14 +8,14 @@ h1{
     font-size: 16px !important;
   
 }
-p{
+.Search_p_p{
     margin: 1% 0.3%;
 }
-.mb{
+.mb_p{
     margin-bottom: 1.5 rem;
-
+    text-align: center;
 }
-.nav-pills {
+.nav-pills_p {
     margin-top: 1 rem;
     width: 45%;
     margin: 2% 20%;
@@ -27,11 +27,11 @@ p{
     justify-content: space-around;
    
 }
-.nav-pills>li{
+.nav-pills_p>li{
     list-style: none;
     margin: 4% 2% ;
     width: 100px;
-    height: 30px;
+    height: 30px ;
     background-color: #f8f8f8;
     border-radius: 15px;
     font-size: 16px;
@@ -42,18 +42,30 @@ p{
     bottom: 10px;
     justify-content: center;
 }
-img{
-    height:2%;
-    width: 100%;
+
+.hei_p{
+    list-style: none;
+    margin: 4% 2% ;
+    width: 100px;
+    height: 30px ;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0.25rem!important;
+    padding-bottom: 0.25rem !important;
+    top: 0%;
+    bottom: -2%;
+    justify-content: center;
 }
-.nav-pills>.active{
-    background-color: #DA0037;
+.active_p{
+    background-color: #DA0037 !important;
     color: white;
 }
 
-.flex{
+.flex_p{
     display: flex;
-   justify-content: space-evenly;
+  
 }
 .popularCities{
     display: flex;
@@ -104,7 +116,7 @@ img{
     height: 30px;
 }
 
-li{
+.li_search_p{
     list-style: none;
     margin: 2% 1%;
     height: 20px;
@@ -206,4 +218,10 @@ ul{
     text-align: end;
     width: 50%;
     
+}
+
+.bg_img_p{
+    width: 95%;
+    height: 100%;
+    background-repeat: no-repeat;
 }
