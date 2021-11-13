@@ -4,6 +4,7 @@ import { Social } from "../social/Social";
 import { Footers } from "../Footer1/Footers";
 import { Footertwo } from "../Footer2/Footertwo";
 import { Footerthree } from "../Footer3/Footerthree";
+import {Finalpaytrain} from '../finalpayment/Finalpaytrain'
 import { nanoid } from "nanoid";
 const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
   const [user, setUser] = useState("Sumit");
@@ -15,6 +16,12 @@ const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
   const [birth, setBirth] = useState("");
   const [passangers, setPassangers] = useState([]);
   const [count,setCount] = useState(1)
+  const [finalPay,setFinalPay] = useState(false)
+  const [dataFinalMover,setDataFinalMover] = useState("")
+  const handleFinalMove=() =>{
+    let a = datas.ticket_price.second_ac * passangers.length
+    setDataFinalMover(a);
+  }
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -39,6 +46,10 @@ const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
   const handleAdd = () => {
     setPassangers([...passangers, payload]);
     setCount(count+1)
+    setAge("")
+    setName("")
+    setGender("")
+    setBirth("")
   };
   const remove =(id)=>{
     let deta = passangers.filter((e)=>e.id !== id);
@@ -61,6 +72,7 @@ const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
   }, []);
   return (
     <>
+    {!finalPay?<>
       <div className="train-payment-one-s-main">
         {/* <button onClick={() =>{
                 getData()
@@ -482,6 +494,10 @@ const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
               <button
                 className="btn btn-danger px-4 py-2"
                 style={{ fontSize: "1.3rem" }}
+                onClick={() =>{
+                  setFinalPay(true)
+                  handleFinalMove()
+                }}
               >
                 Continue Payment
               </button>
@@ -494,6 +510,10 @@ const Paymentproceederone = ({ selectedTrain, setSelectedTrain, datas }) => {
       <Footers />
       <Footertwo />
       <Footerthree />
+      </>
+      :
+      <Finalpaytrain dataFinalMover={dataFinalMover} />
+              }
     </>
   );
 };
