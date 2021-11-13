@@ -1,6 +1,6 @@
 import React from 'react';
-import { Test2 } from './Test2';
 import './css/offers.css'
+import Slidebarr from './SlideBarr';
 
 const Offers = () => {
 
@@ -19,8 +19,7 @@ const Offers = () => {
                         </ul>
                     </div>
 
-                    <div style={{ width: "95%", margin: "auto", backgroundColor: "white", marginTop: "50px" }}> <Test2 /></div>
-
+                    <div > <Slidebarr /></div>
                 </div>
             </div>
         </>

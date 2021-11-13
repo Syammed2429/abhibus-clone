@@ -33,7 +33,7 @@ function Slidebarr() {
                     />
                     <img
                         className="slider"
-                        src="./images/get200.png"
+                        src="https://static.abhibus.com/busgallery/offerbanners/Sep2021/24/1632471175/mobe-476x220.png"
                         alt=""
                     />
                     <img

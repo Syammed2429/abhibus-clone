@@ -1,7 +1,9 @@
 const Info = () => {
     return (
         <>
-            <div className="d-flex border border-secondary mt-4 p-4 w-55  col-8 container">
+            {/* <div className="d-flex border border-secondary mt-4 p-4 w-55  col-8 container text-center"> */}
+            <div className="d-flex mt-4 p-4  container col-8 my-5">
+
                 <div className="col">
 
                     <img src="#" alt="re" />
