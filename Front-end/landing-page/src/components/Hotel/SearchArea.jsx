@@ -11,29 +11,29 @@ function SearchArea() {
     return (
         <div>
             <NavBar2 />
-            <h1 className="mb"> Book Hotels Online </h1>
-            <ul className="nav-pills">
-                <Link to="/"><li>Bus</li></Link>
-                <Link to="/book-train-tickets"><li>Train</li></Link>
-                <Link to="/hotels"><li className="active">Hotels</li></Link>
-                <li>Rentals</li>
+            <h1 className="mb_p"> Book Hotels Online </h1>
+            <ul className="nav-pills_p">
+              <li className="li_search_p"><Link to="/">Bus</Link></li>
+              <li className="li_search_p">  <Link to="/book-train-tickets">Train</Link></li>
+              <li className="active_p li_search_p">  <Link to="/hotels"className="active_p" >Hotels</Link></li>
+                <li className="li_search_p">Rentals</li>
 
             </ul>
             <div>
                 <SearchBox />
-                <img src="https://static.abhibus.com/assets/img/hotel-seach-bg.png" alt="Hotel_Background" />
+                <img className="bg_img_p" src="https://static.abhibus.com/assets/img/hotel-seach-bg.png" alt="Hotel_Background" />
             </div>
             {/*Offer Section Start */}
             <div className="offer-cont">
                 <div className="offer_block">
-                    <ul className="flex">
+                    <ul className="flex_p">
                         <li className="offer"> AbhiBus Offers </li>
                         <li> All Offers </li>
                         <li> Bus Offers </li>
                         <li> View All </li>
 
                     </ul>
-                    <div className="flex">
+                    <div className="flex_p">
                         <img className="offer_img" src="https://static.abhibus.com/busgallery/offerbanners/Oct2021/08/1633635886/476x220.png" alt="offer" />
                         <img className="offer_img" src="https://static.abhibus.com/busgallery/offerbanners/Oct2021/01/1633076370/476x220.png" alt="offer" />
                         <img className="offer_img" src="https://static.abhibus.com/busgallery/offerbanners/Oct2021/31/1635683049/476X220.png" alt="offer" />
@@ -45,7 +45,7 @@ function SearchArea() {
                     <div className="cities">
                         <img src="https://static.abhibus.com/busgallery/popularCities/1519842600_hyd.jpg" alt="offer" />
                         <p className="bottom-left">Book Hotels in Hyderabad</p>
-                        <div className="flex">
+                        <div className="flex_p">
                             <div>
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹2829</p>
@@ -56,7 +56,7 @@ function SearchArea() {
                     <div className="cities">
                         <img src="https://static.abhibus.com/busgallery/popularCities/1519842600_gan.jpg" alt="offer" />
                         <p className="bottom-left">Book Hotels in Banglore</p>
-                        <div className="flex">
+                        <div className="flex_p">
                             <div>
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹607</p>
@@ -67,7 +67,7 @@ function SearchArea() {
                     <div className="cities">
                         <img src="https://static.abhibus.com/busgallery/popularCities/1519842600_mum.jpg" alt="offer" />
                         <p className="bottom-left">Book Hotels in Mumbai</p>
-                        <div className="flex">
+                        <div className="flex_p">
                             <div>
                                 <p>Price Starts at</p>
                                 <p className="red"> ₹350</p>

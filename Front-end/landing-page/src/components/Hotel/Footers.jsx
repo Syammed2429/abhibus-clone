@@ -25,80 +25,80 @@ function Footer() {
             </div>
             <div style={mystyle}>
 
-                <div className="Footers">
-                    <p className="black">Popular Bus Routes</p>
-                    <ul>
-                        <li> Hyderabad to Bangalore Buses</li>
-                        <li>Pune to Shirdi Buses</li>
-                        <li>Chennai to Coimbatore Buses</li>
-                        <li> Hyderabad to Visakhapatnam Buses</li>
-                        <li> Bangalore to Hyderabad Buses</li>
-                        <li>Bangalore to Vijayawada Buses</li>
-                        <li>Hyderabad to Chennai Buses</li>
-                        <li> Chennai to Bangalore Buses</li>
-                        <li>Bangalore to Chennai Buses</li>
-                        <li>Hyderabad to Vijayawada Buses</li>
+                <div className="Footers_p block_p">
+                    <p className="black_p">Popular Bus Routes</p>
+                    <ul className="Footers_p_ul">
+                        <li className="Footers_p_li"> Hyderabad to Bangalore </li>
+                        <li className="Footers_p_li">Pune to Shirdi </li>
+                        <li className="Footers_p_li">Chennai to Coimbatore </li>
+                        <li className="Footers_p_li"> Hyderabad to Visakhapatnam </li>
+                        <li className="Footers_p_li"> Bangalore to Hyderabad </li>
+                        <li className="Footers_p_li">Bangalore to Vijayawada </li>
+                        <li className="Footers_p_li">Hyderabad to Chennai </li>
+                        <li className="Footers_p_li"> Chennai to Bangalore </li>
+                        <li className="Footers_p_li">Bangalore to Chennai </li>
+                        <li className="Footers_p_li">Hyderabad to Vijayawada </li>
                     </ul>
                 </div>
-                <div className="Footers">
-                    <p className="black">Popular Train Routes</p>
-                    <ul>
-                        <li> Hyderabad - Tirupati Trains</li>
-                        <li> Bangalore - Hyderabad Trains
+                <div className="Footers_p block_p">
+                    <p className="black_p">Popular Train Routes</p>
+                    <ul className="Footers_p_ul">
+                        <li className="Footers_p_li"> Hyderabad - Tirupati</li>
+                        <li className="Footers_p_li"> Bangalore - Hyderabad
                         </li>
-                        <li> Chennai - Hyderabad Trains</li>
-                        <li>  Bangalore - Mysore Trains</li>
-                        <li>  Delhi - Coimbatore Trains</li>
-                        <li>Guntur to Hyderabad Trains
+                        <li className="Footers_p_li"> Chennai - Hyderabad</li>
+                        <li className="Footers_p_li">  Bangalore - Mysore</li>
+                        <li className="Footers_p_li">  Delhi - Coimbatore</li>
+                        <li className="Footers_p_li">Guntur to Hyderabad
                         </li>
-                        <li> Bangalore to Bhubaneswar Trains</li>
-                        <li> Bangalore to Channarayapatna Trains</li>
-                        <li> Coimbatore to Ernakulam Trains</li>
-                        <li> Pune to Hyderabad Trains</li>
+                        <li className="Footers_p_li"> Bangalore to Bhubaneswar</li>
+                        <li className="Footers_p_li"> Bangalore to Channarayapatna</li>
+                        <li className="Footers_p_li"> Coimbatore to Ernakulam</li>
+                        <li className="Footers_p_li"> Pune to Hyderabad</li>
                     </ul>
                 </div>
-                <div className="Footers">
-                    <p className="black">Popular Hotel Cities</p>
-                    <ul>
-                        <li> Hotels in Hyderabad</li>
-                        <li> Hotels in Jaipur</li>
-                        <li> Hotels in Mangalore</li>
-                        <li> Hotels in Bengaluru</li>
-                        <li> Hotels in Visakhapatnam</li>
-                        <li> Hotels in Goa</li>
-                        <li> Hotels in Mysore</li>
-                        <li> Hotels in Shirdi</li>
-                        <li> Hotels in Coimbatore</li>
-                        <li> Hotels in Coorg</li>
+                <div className="Footers_p block_p">
+                    <p className="black_p">Popular Hotel Cities</p>
+                    <ul className="Footers_p_ul">
+                        <li className="Footers_p_li"> Hotels in Hyderabad</li>
+                        <li className="Footers_p_li"> Hotels in Jaipur</li>
+                        <li className="Footers_p_li"> Hotels in Mangalore</li>
+                        <li className="Footers_p_li"> Hotels in Bengaluru</li>
+                        <li className="Footers_p_li"> Hotels in Visakhapatnam</li>
+                        <li className="Footers_p_li"> Hotels in Goa</li>
+                        <li className="Footers_p_li"> Hotels in Mysore</li>
+                        <li className="Footers_p_li"> Hotels in Shirdi</li>
+                        <li className="Footers_p_li"> Hotels in Coimbatore</li>
+                        <li className="Footers_p_li"> Hotels in Coorg</li>
                     </ul>
                 </div>
-                <div className="Footers">
-                    <p className="black">Popular Bus Operators</p>
-                    <ul>
+                <div className="Footers_p block_p">
+                    <p className="black_p">Popular Bus Operators</p>
+                    <ul className="Footers_p_ul">
 
-                        <li> APSRTC</li>
-                        <li> TSRTC</li>
-                        <li> BSRTC</li>
-                        <li> Kerala RTC</li>
-                        <li> Orange Travels</li>
-                        <li> SRS Travels</li>
-                        <li> Morning Star Travels</li>
-                        <li> Kaveri Travels</li>
-                        <li> Diwakar Travels</li>
+                        <li className="Footers_p_li"> APSRTC</li>
+                        <li className="Footers_p_li"> TSRTC</li>
+                        <li className="Footers_p_li"> BSRTC</li>
+                        <li className="Footers_p_li"> Kerala RTC</li>
+                        <li className="Footers_p_li"> Orange Travels</li>
+                        <li className="Footers_p_li"> SRS Travels</li>
+                        <li className="Footers_p_li"> Morning Star Travels</li>
+                        <li className="Footers_p_li"> Kaveri Travels</li>
+                        <li className="Footers_p_li"> Diwakar Travels</li>
                     </ul>
                 </div>
-                <div className="Footers">
-                    <p className="black">More Useful Links</p>
-                    <ul>
-                        <li>  Check PNR Status</li>
-                        <li> Train Running Status</li>
-                        <li>  Bus Rentals</li>
-                        <li>  APSRTC Bus Booking</li>
-                        <li>  TSRTC Bus Booking</li>
-                        <li>Kerala RTC Bus Booking</li>
-                        <li>MSRTC Bus Booking</li>
-                        <li> Hotel Bookings</li>
-                        <li> Bus Booking Offers</li>
+                <div className="Footers_p block_p">
+                    <p className="black_p">More Useful Links</p>
+                    <ul className="Footers_p_ul">
+                        <li  className="Footers_p_li">  Check PNR Status</li>
+                        <li  className="Footers_p_li"> Train Running Status</li>
+                        <li className="Footers_p_li">  Bus Rentals</li>
+                        <li className="Footers_p_li">  APSRTC Bus Booking</li>
+                        <li className="Footers_p_li">  TSRTC Bus Booking</li>
+                        <li className="Footers_p_li">Kerala RTC Bus Booking</li>
+                        <li className="Footers_p_li">MSRTC Bus Booking</li>
+                        <li className="Footers_p_li"> Hotel Bookings</li>
+                        <li className="Footers_p_li"> Bus Booking Offers</li>
 
                     </ul>
                 </div>

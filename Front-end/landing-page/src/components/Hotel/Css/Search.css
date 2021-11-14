@@ -1,9 +1,9 @@
 .flex{
     display: flex !important;
-    justify-content: unset;
+   
     margin: 1% 15%;
 }
-.input{
+.input_searchBox_p{
     margin: 0% ;
     height: 40px;
     margin-left: 20px;
@@ -17,6 +17,9 @@
    
    
 }
+.margin_searchBox_p{
+	margin-left: 10%;
+}
 	.floating-label {
 		font-size: 14px;
 		color: #cccccc;
@@ -27,7 +30,7 @@
 		transition: all 0.1s ease;
         
 	}
-	.color{
+	.color_p{
 		color: #cccccc;
 	}
 	.floating-label2 {
@@ -63,7 +66,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.border{
+.border_p{
     border:1px solid grey;
     
     height: 60px;
@@ -77,12 +80,14 @@
 }
 
 .button_search{
-    height: 62px;
-    width: 250px;
+    height: 60px;
+    width: 150px;
     margin: 1% 0%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-	
+	background-color: #dc3545;
+	color: white;
+	font-size: 16px;
 }
 
 

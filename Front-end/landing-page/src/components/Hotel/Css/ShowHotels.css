@@ -1,9 +1,13 @@
 
-.thumbnail{
+.thumbnail-div-p{
     height: 200px;
     width: 200px;
 }
-.suggestion-width{
+.thumbnail_img_p{
+    height: 100%;
+    width: 100%;
+}
+.suggestion-width_p{
     width: 150%;
     border:  1px solid lightslategray;
     justify-content: space-between;
@@ -12,13 +16,20 @@
 .teal_p{
     background-color: #efefef;
     height: 30px;
+    
+   
+
 }.right_p{
     float: right;
+    font-size: 14px;
+    margin:0.5% 4%;
 }
 .filter_p{
     border: 1px solid lightslategray;
-    text-align: left !important;
-    width: 150%;
+   
+    width: 15%;
+    margin: 5%;
+    height: fit-content;
 }
 .filter_p_h3{
     border: 1px solid lightslategrey;
@@ -29,8 +40,19 @@
 .filter_p_button{
     align-self: center;
     margin:5% 30% !important;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    border: none;
 }
-
+.reserve_shoeHotels_p{
+    align-self: center;
+    margin:5%  !important;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
 input[type="checkbox" ] {
     background-color: initial;
     cursor: default;
@@ -46,11 +68,14 @@ input[type="checkbox" ] {
 }
 .btn-margin_p>button{
     margin-top: 5%;
-    width: 150%;
+    width: 100%;
 }
 .p_p{
-   
-    margin-top:2.2% ;
+   margin-left: 0%;
+    margin-top:0% ;
+}
+.showHotels_h3-p{
+    margin-right: 0%;
 }
 .green_p{
     background-color: cadetblue;
@@ -61,4 +86,18 @@ input[type="checkbox" ] {
    height: 15px;
    width: 100%;
    margin-top: 10%;
+}
+
+.showhotel_header_p{
+    margin:1% 4%;
+}
+.margin_showHotel_p{
+    margin: 4.5%;
+}
+.margin_suggestion_p{
+    margin: 2%;
+}
+.location_showHotel_p{
+    height: 20px;
+    width: 20px;
 }

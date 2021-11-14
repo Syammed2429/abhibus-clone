@@ -2,7 +2,7 @@
     display: flex;
 }
 .show{
-    width: 147%;
+    width: 150%;
     height: 150%;
     margin: 3.7%;
     margin-top: 0%;
@@ -19,7 +19,7 @@
     justify-content: space-between;
    margin: 2%;
 }
-.block{
+.block_p{
     display: block;
     width: 100%;
 }
@@ -46,23 +46,24 @@
     height: 200px;
    text-align: left;
 }
-.text-decor{
+.text-decor_p{
       font-weight:100 ;
       color: red;
       text-align: start;
       margin-top:8%;
+      margin-left: 8%;
 }
 .h4_room_p{
     margin-left: 4%;
 }
-.special-li{
-  
+.special-li_p{
+    display: block;
     text-align: start;
 }
-.special-li>li{
-  
- 
+.special-li_li_p{
    list-style-type: disc;
+   margin: 0%;
+   padding: 0%;
 }
 body{
     font-size: 14px;
@@ -90,4 +91,15 @@ body{
 .sugg_img{
     height: 65%;
     width: 100%;
+}
+
+.button_ShowRoom_p{
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    margin: 1.5% 0%;
+}
+
+.showRoom_border_p{
+    border: 1px solid lightslategray;
 }

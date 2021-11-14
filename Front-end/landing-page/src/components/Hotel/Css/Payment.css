@@ -1,4 +1,4 @@
-.coupon-button{
+.coupon-button_p{
     background-color: grey;;
     border: 1px solid red;
     min-width: 70px;
@@ -17,18 +17,18 @@
     width: 80%;
 }
 .border_div_p{
-    border: 1px solid lightslategray;
+    border: 1px solid lightslategray !important;
     
 }
 .WID_P{
     width: 100%;
     margin:0% 2%;
 }
-.text{
+.text_p{
     text-align: left;
     display: flex;
 }
-.margin{
+.margin_Payment_p{
     margin: 5%;
     word-wrap: break-word;
     text-align: left;
@@ -37,21 +37,21 @@
 .cen_p{
     text-align: center;
 }
-.btn-back{
+.btn-back_p{
     background-color: rgb(200, 207, 214);
 }
-.btn-back>button{
+.btn-back_p>button{
    margin:2% 40%;
 }
 .card_p{
     border: 1px solid lightslategray;
     width: 100%;
 }
-.coupon{
+.coupon_p{
     margin:2% 0% ;
     height: 45px;
 }
-.pay_thumb{
+.pay_thumb_p{
     width: 100%;
     height: 100%;
 }
@@ -64,4 +64,20 @@
     width: 100px;
     margin: 0%;
     height: 30px;
+}
+.color_payment_p{
+   font-weight: 0 !important;
+}
+.payment_justify_undset_p{
+    justify-content: unset;
+    width: 2%;
+}
+.card_input_width_payment_p{
+    width: auto;
+}
+
+.border_none_payment_p{
+    border: 1px solid lightsteelblue;
+    background-color: #dc3545;
+    color: white;
 }

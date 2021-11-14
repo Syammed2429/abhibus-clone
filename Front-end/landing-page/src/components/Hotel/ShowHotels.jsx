@@ -111,13 +111,13 @@ function ShowHotel({ city, checkin, checkout, guest }) {
             {loading && <p>Loading</p>}
             {isError && <div>"SomeThing went wrong"</div>}
 
-            ShowHotels TextArea
+            
             {Show && <><div>
-                <div className="flex">
-                    <h3>{location.state.city} </h3>
+                <div className="flex_p showhotel_header_p">
+                    <h3 className="showHotels_h3-p">{location.state.city} </h3>
                     <p className="p_p">-{details.length}Hotels Found</p>
                 </div>
-                <div className="flex">
+                <div className="flex_p showhotel_header_p">
                     <p className="teal_p">Check-in - {checkin.getDate()}/{checkin.getMonth()}/{checkin.getYear()},</p>
                     <p className="teal_p">{"           "}Check-out- {checkout.getDate()}/{checkout.getMonth()}/{checkout.getYear()},</p>
                     <p>{"  "}Guest - {location.state.guest} </p>
@@ -132,8 +132,8 @@ function ShowHotel({ city, checkin, checkout, guest }) {
                         </select>
                     </div>
                 </div>
-                <div className="flex">
-                    <div>
+                <div className="flex_p">
+                    
                         <div className="filter_p">
                             {/* <label>{999}-{price}</label>
                         <input type="range" name="price" 
@@ -173,18 +173,21 @@ function ShowHotel({ city, checkin, checkout, guest }) {
                             </div>
                         </div>
 
-                    </div>
-                    <div>
+                    
+                    <div className="margin_showHotel_p">
                         {details.map((e) => {
-                            return <div key={e._id} className="flex suggestion-width">
-                                <img className="thumbnail" src={e.thumbnail} alt="thumbnail" />
+                            return <div key={e._id} className="flex_p suggestion-width_p margin_suggestion_p">
+                                <div className="thumbnail-div-p">
+                                <img className="thumbnail_img_p" src={e.thumbnail} alt="thumbnail" />
+                                </div>
+                                
                                 <div>
                                     <p>{e.hotel_name}</p>
-                                    <p>{e.location}</p>
+                                    <p className="flex_p">{e.location}<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyE2qOPNnzhBGz5_V9q3YifcnOj615VOM-7m0eN7O4oWz1BAhZyaisPVIe7MUlOMh-NNk&usqp=CAU" className="location_showHotel_p" alt="location.png" /></p>
                                 </div>
                                 <div className="btn-margin_p">
                                     <div className="red"> ₹{e.price}</div>
-                                    <button onClick={() => {
+                                    <button className="reserve_shoeHotels_p" onClick={() => {
                                         console.log(e._id, "id");
                                         move(e._id, checkout, checkin, guest)
                                     }}>Reserve</button>
