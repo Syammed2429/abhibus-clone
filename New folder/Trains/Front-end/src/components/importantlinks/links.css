@@ -1,0 +1,20 @@
+.padding-left-s{
+    padding:0px 120px;
+}
+.linkers-s{
+    display: grid;
+    grid-template-columns: 35% 64%;
+    grid-gap: 13px;
+   
+}
+.linkers-grid-s{
+    display: grid;
+    grid-template-columns:48% 48%;
+    grid-gap: 2%;
+    
+}
+.linkers-grid-s>div{
+    border: 1px solid rgb(219, 219, 219);
+    padding:12px;
+    cursor: pointer;
+}
