@@ -1,6 +1,0 @@
-.box{
-    display: grid;
-    grid-template-columns:48% 50%;
-    grid-gap: 2%;
-    margin-left:0px ;
-}
