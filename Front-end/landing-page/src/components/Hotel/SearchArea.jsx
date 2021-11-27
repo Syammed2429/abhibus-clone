@@ -13,9 +13,9 @@ function SearchArea() {
             <NavBar2 />
             <h1 className="mb_p"> Book Hotels Online </h1>
             <ul className="nav-pills_p">
-              <li className="li_search_p"><Link to="/">Bus</Link></li>
-              <li className="li_search_p">  <Link to="/book-train-tickets">Train</Link></li>
-              <li className="active_p li_search_p">  <Link to="/hotels"className="active_p" >Hotels</Link></li>
+                <li className="li_search_p"><Link to="/">Bus</Link></li>
+                <li className="li_search_p">  <Link to="/book-train-tickets">Train</Link></li>
+                <li className="active_p li_search_p">  <Link to="/hotels" className="active_p" >Hotels</Link></li>
                 <li className="li_search_p">Rentals</li>
 
             </ul>
