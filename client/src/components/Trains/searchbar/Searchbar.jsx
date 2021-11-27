@@ -5,6 +5,8 @@ import { NavBar2 } from "../../LandingPage/NavBar2";
 
 
 const Searchbar = ({ setFlag, setData, setSourceTrain, setDestTrain, sourceTrain, destTrain }) => {
+  const URL = process.env.REACT_APP_ABHI_BUS
+
   const [opener, setOpener] = useState(1);
 
   const [trainJourneyDate, setTrainJourneyDate] = useState("");
@@ -22,7 +24,7 @@ const Searchbar = ({ setFlag, setData, setSourceTrain, setDestTrain, sourceTrain
   function getData() {
     async function getter() {
       try {
-        let data = await fetch(`${process.env.REACT_APP_API}/trains/${sourceTrain}/${destTrain}`);
+        let data = await fetch(`${URL}/trains/${sourceTrain}/${destTrain}`);
         let x = await data.json();
         setData(x);
         setFlag(true)

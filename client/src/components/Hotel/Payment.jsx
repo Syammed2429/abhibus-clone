@@ -6,6 +6,8 @@ import Footer from "./Footers";
 import { NavBar2 } from "../LandingPage/NavBar2";
 
 function Pay({ type, checkin, checkout, guest, id }) {
+    const URL = process.env.REACT_APP_ABHI_BUS
+
     const location = useLocation();
     const [price, setPrice] = useState(0);
     const [data, setData] = useState([]);
@@ -37,7 +39,7 @@ function Pay({ type, checkin, checkout, guest, id }) {
     }
     async function getData() {
         console.log(location.state)
-        await axios.get(`https://abhibus-clone.herokuapp.com/hotels/${location.state.checkout}`)
+        await axios.get(`${URL}/hotels/${location.state.checkout}`)
             .then((res) => {
                 setData(res.data);
                 if (location.state.id === "oak") {

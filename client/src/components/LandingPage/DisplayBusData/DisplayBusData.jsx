@@ -9,7 +9,7 @@ import "../../css/DisplayBusData.css"
 const DisplayBusDetails = () => {
 
     const URL = process.env.REACT_APP_ABHI_BUS
-    console.log('URL:', URL)
+
     const location = useLocation();
     const history = useHistory();
 
@@ -34,13 +34,13 @@ const DisplayBusDetails = () => {
         let query = {};
         query["from"] = from;
         query["to"] = to
-        const { data } = await axios.get(`${process.env.REACT_APP_API}/bus?from=${from}&to=${to}`)
+        const { data } = await axios.get(`${URL}/bus?from=${from}&to=${to}`)
         setBusData(data)
-        console.log('data:', data)
+
 
     }
     const sorted_data = async (from, to, sorting) => {
-        const { data } = await axios.get(` ${process.env.REACT_APP_API}/bus/sort?from=${from}&to=${to}&sorting=${sorting}`);
+        const { data } = await axios.get(` ${URL}/bus/sort?from=${from}&to=${to}&sorting=${sorting}`);
         setBusData(data);
 
     }

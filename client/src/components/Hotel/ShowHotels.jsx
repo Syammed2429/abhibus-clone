@@ -8,6 +8,8 @@ import { NavBar2 } from "../LandingPage/NavBar2";
 
 
 function ShowHotel({ city, checkin, checkout, guest }) {
+    const URL = process.env.REACT_APP_ABHI_BUS
+
     const location = useLocation();
     const history = useHistory();
     console.log(location.state.city, location.state.checkout, location.state.checkin, location.state.guest)
@@ -40,7 +42,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
         });
     }
     useEffect(async () => {
-        await axios.get(`${process.env.REACT_APP_API}/hotels/sort_asc`)
+        await axios.get(`${URL}/hotels/sort_asc`)
 
             .then((res) => {
 
@@ -73,7 +75,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
             query["front_Desk"] = Front_Desk
         }
         console.log(query);
-        axios.get(`${process.env.REACT_APP_API}/hotels/filter_query`,
+        axios.get(`${URL}/hotels/filter_query`,
             {
                 params: query
             })
@@ -92,7 +94,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
 
     const getDetails = async (order) => {
         // console.log(order)
-        axios.get(`${process.env.REACT_APP_API}/hotels/sort_${order}`)
+        axios.get(`${URL}/hotels/sort_${order}`)
 
             .then((res) => {
 

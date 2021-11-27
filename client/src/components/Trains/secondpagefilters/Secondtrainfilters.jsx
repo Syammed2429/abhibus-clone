@@ -9,6 +9,8 @@ import { Paymentproceederone } from "../paymentproceeder1/Paymentproceederone";
 import { NavBar2 } from "../../LandingPage/NavBar2";
 
 const Secondtrainfilters = ({ data, sourceTrain, destTrain }) => {
+  const URL = process.env.REACT_APP_ABHI_BUS
+
   const [datalocal, setDataLocal] = useState([]);
   const [depart, setDepart] = useState(destTrain);
   const [arrival, setArrival] = useState(sourceTrain);
@@ -32,21 +34,21 @@ const Secondtrainfilters = ({ data, sourceTrain, destTrain }) => {
       var data;
       if (sortbyduration === true) {
         data = await fetch(
-          `${process.env.REACT_APP_API}/trains/sortbyduration/${sourceTrain}/${destTrain}`
+          `${URL}/trains/sortbyduration/${sourceTrain}/${destTrain}`
         );
         let x = await data.json();
         setDataLocal(x);
         setFlag(true);
       } else if (sortbyarrival === true) {
         data = await fetch(
-          `${process.env.REACT_APP_API}/trains/sortbyarrival/${sourceTrain}/${destTrain}`
+          `${URL}/trains/sortbyarrival/${sourceTrain}/${destTrain}`
         );
         let x = await data.json();
         setDataLocal(x);
         setFlag(true);
       } else if (sortbydepart === true) {
         data = await fetch(
-          `${process.env.REACT_APP_API}/trains/sortbydepart/${sourceTrain}/${destTrain}`
+          `${URL}/trains/sortbydepart/${sourceTrain}/${destTrain}`
         );
         let x = await data.json();
         setDataLocal(x);
@@ -63,7 +65,7 @@ const Secondtrainfilters = ({ data, sourceTrain, destTrain }) => {
   const [datas, setDatas] = useState(null);
   function getDatas() {
     async function getter() {
-      let x = await fetch(`${process.env.REACT_APP_API}/trains/${selectedTrain}`)
+      let x = await fetch(`${URL}/trains/${selectedTrain}`)
       let data = await x.json();
       let y = data.trains;
       setDatas(y)
@@ -71,6 +73,8 @@ const Secondtrainfilters = ({ data, sourceTrain, destTrain }) => {
     }
     getter();
   }
+
+
 
   return (
     <>

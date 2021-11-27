@@ -8,6 +8,8 @@ import { NavBar2 } from "../LandingPage/NavBar2";
 
 
 function ShowRoom() {
+  const URL = process.env.REACT_APP_ABHI_BUS
+
   const location = useLocation();
   const history = useHistory();
   const [data, setData] = useState([]);
@@ -30,7 +32,7 @@ function ShowRoom() {
   }
   const getData = async () => {
     // console.log(location.state,"state")
-    await axios.get(`${process.env.REACT_APP_API}/hotels/${location.state.id}`)
+    await axios.get(`${URL}/hotels/${location.state.id}`)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
