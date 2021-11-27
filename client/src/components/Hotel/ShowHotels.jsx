@@ -40,7 +40,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
         });
     }
     useEffect(async () => {
-        await axios.get(`https://abhibus-clone.herokuapp.com/hotels/sort_asc`)
+        await axios.get(`${process.env.REACT_APP_API}/hotels/sort_asc`)
 
             .then((res) => {
 
@@ -73,7 +73,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
             query["front_Desk"] = Front_Desk
         }
         console.log(query);
-        axios.get(`https://abhibus-clone.herokuapp.com/hotels/filter_query`,
+        axios.get(`${process.env.REACT_APP_API}/hotels/filter_query`,
             {
                 params: query
             })
@@ -92,7 +92,7 @@ function ShowHotel({ city, checkin, checkout, guest }) {
 
     const getDetails = async (order) => {
         // console.log(order)
-        axios.get(`https://abhibus-clone.herokuapp.com/hotels/sort_${order}`)
+        axios.get(`${process.env.REACT_APP_API}/hotels/sort_${order}`)
 
             .then((res) => {
 

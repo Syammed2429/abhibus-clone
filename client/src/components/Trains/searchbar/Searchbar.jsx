@@ -22,7 +22,7 @@ const Searchbar = ({ setFlag, setData, setSourceTrain, setDestTrain, sourceTrain
   function getData() {
     async function getter() {
       try {
-        let data = await fetch(`http://localhost:2924/trains/${sourceTrain}/${destTrain}`);
+        let data = await fetch(`${process.env.REACT_APP_API}/trains/${sourceTrain}/${destTrain}`);
         let x = await data.json();
         setData(x);
         setFlag(true)

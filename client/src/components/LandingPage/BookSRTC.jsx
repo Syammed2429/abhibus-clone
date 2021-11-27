@@ -12,7 +12,7 @@ const BookSRTC = () => {
                     <h3>Book SRTC(State Road Transport Corporation) bus tickets at AbhiBus</h3>
                     <div>
                         <ul className="d-flex justify-content-end">
-
+                            {console.log("ENV", process.env.REACT_APP_API)}
                         </ul>
                     </div>
                     <div > <Slidebarr /></div>

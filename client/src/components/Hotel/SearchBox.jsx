@@ -2,8 +2,7 @@ import { useState } from "react"
 import "./Css/Search.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import ShowHotel from "./ShowHotels";
-import { Switch, Route, Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function SearchBox() {
     const [city, setCity] = useState("");
@@ -15,9 +14,9 @@ function SearchBox() {
 
     const handlesubmit = (e) => {
         // console.log("city",city,checkin,checkout,guest)
-        if(city===""){
+        if (city === "") {
             alert("Enter City")
-        }else{
+        } else {
             setShow(true);
             history.push({
                 pathname: "/showHotels",
@@ -29,7 +28,7 @@ function SearchBox() {
                 }
             });
         }
-       
+
     }
     return (
 
