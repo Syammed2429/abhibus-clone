@@ -22,7 +22,9 @@ abhibus.com is online ticketing company that facilitates online booking of bus a
 ## Demo
 Click the given link to visit the website
 
-https://masai-course.s3.ap-south-1.amazonaws.com/users/1881/submissions/227384/403177/c023e98d6afcdd9d4222e7ce62faef90/Abhibus-clone.mp4
+<a href="https://abhi-bus-clone.vercel.app/" title="Abhi bus clone">Abhi Bus Clone Demo Link</a>
+
+<!-- https://masai-course.s3.ap-south-1.amazonaws.com/users/1881/submissions/227384/403177/c023e98d6afcdd9d4222e7ce62faef90/Abhibus-clone.mp4 -->
 ## Features
 
 - User can authenticate themselves using Login/signup button.Either user can use OTP verification or google authentication.
